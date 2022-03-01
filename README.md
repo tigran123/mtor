@@ -1,5 +1,5 @@
-# mtor
-"Mathematical Theory of Relativity" by A.S. Eddington
+# Mathematical Theory of Relativity
+A classic textbook on Relativity (both Special and General) by Sir Arthur Stanley Eddington, first published in 1923.
 
 This book is based on the source code available in Public Domain at Project Gutenberg at:
 [https://www.gutenberg.org/ebooks/59248](https://www.gutenberg.org/ebooks/59248)
