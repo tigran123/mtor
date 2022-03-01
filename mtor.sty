@@ -1,0 +1,359 @@
+\NeedsTeXFormat{LaTeX2e}[2000/06/01]
+\ProvidesPackage{mtor}[2022/02/24 v1.0]
+
+\RequirePackage{indentfirst,amsmath,amsfonts,amssymb,fancyhdr,theorem,enumerate,makeidx,multicol,textcase,fancybox,color,xltxtra,polyglossia,graphicx,calc,gensymb,hyphenat}
+
+\setdefaultlanguage{english}
+
+\RequirePackage[perpage,symbol]{footmisc}[2005/03/17]
+
+\RequirePackage{datetime}
+\def\DTtoday{\formatdate{\day}{\month}{\year}}
+\def\shorttoday{{\shortdate\showdowfalse\formatdate{\day}{\month}{\year}}}
+
+\RequirePackage{lettrine}
+\setcounter{DefaultLines}{2}
+
+% conditional markup tuning, to maintain more than 1 version of module sources with hand-tuned markup
+\def\tunemarkuptag#1{\@namedef{tune@markup@#1}{}}
+\def\tunemarkup#1#2{\@ifundefined{tune@markup@#1}{}{#2}}
+\def\tunemarkuptwo#1#2#3{\@ifundefined{tune@markup@#1}{#3}{#2}}
+
+% various page sizes
+\tunemarkuptag{pgnexus10}
+%\tunemarkuptag{pgthinmob}
+%\tunemarkuptag{pgkoboaurahd}
+
+% various font families
+\tunemarkuptag{garamond}
+
+\tunemarkup{garamond}{%
+\def\mainfontname{Garamond Premier Pro}
+\def\parttitlefontname{GoudyHandtooled BT}
+\def\titlefontname{Garamond Premier Pro Semibold Display}
+\def\mdheadingfontname{Garamond Premier Pro Medium Caption}
+\def\headingfontname{Garamond Premier Pro Semibold Caption}
+}
+
+\setmainfont[WordSpace={1.2,2.5,1.0},Mapping=tex-text]{\mainfontname}
+\newfontfamily\parttitlefont[Letters=Uppercase,LetterSpace=3.0,WordSpace=2.0,Mapping=tex-text]{\parttitlefontname}
+\newfontfamily\titlefont[Letters=Uppercase,LetterSpace=3.0,WordSpace=2.0,Mapping=tex-text]{\titlefontname}
+\newfontfamily\mdheadingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\mdheadingfontname}
+\newfontfamily\headingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\headingfontname}
+
+% Google Nexus 10 (or any Android 10" colour device)
+\tunemarkup{pgnexus10}{\RequirePackage[dvips,headheight=19pt,headsep=2pt,vmargin={0.3in,0.2in},hmargin={0.1in},twoside=true,papersize={135.0mm,216mm}]{geometry}}
+
+\RequirePackage[plainpages=false,
+                hyperfootnotes=false,
+                pdfpagelabels,
+                colorlinks,
+                linkcolor=\tunemarkup{pgnexus7}{blue}\tunemarkup{pgnexus10}{blue}\tunemarkup{pgthinmob}{blue}\tunemarkup{pgkoboaurahd}{black}\tunemarkup{pgkoboauraone}{black}\tunemarkup{pgkobomini}{black}\tunemarkup{pgafour}{black},%
+                anchorcolor=black,
+                citecolor=black,
+                filecolor=black,
+                menucolor=black,
+                pagecolor=black,
+                urlcolor=\tunemarkup{pgnexus7}{blue}\tunemarkup{pgnexus10}{blue}\tunemarkup{pgthinmob}{blue}\tunemarkup{pgkoboaurahd}{black}\tunemarkup{pgkoboauraone}{black}\tunemarkup{pgkobomini}{black}\tunemarkup{pgafour}{black}]{hyperref}
+
+\AtBeginDocument{%
+\hypersetup{%
+  pdftitle={The Mathematical Theory of Relativity},%
+  pdfauthor={Sir Arthur Stanley Eddington, M.A., M.Sc., F.R.S.},%
+  pdfcreator={Bibles.org.uk Typesetting System based on TeX Live 2021},%
+  pdfsubject={General Theory of Relativity},%
+  pdfkeywords={time,space,relativity,gravitation,metric,Einstein},%
+  pdflang={English},%
+  pdfcreationdate={D:20220224142200Z},%
+  pdfmoddate={D:\pdfdate-00'00'}%
+}%
+}
+
+% page separators for matching page references of the original
+\newcommand{\PageSep}[1]{\phantomsection\label{page:#1}\ignorespaces}
+\newcommand{\PageRef}[1]{\hyperref[page:#1]{p.~\pageref*{page:#1}}}
+
+\newcommand{\Ham}{\mathfrak{h}}
+\newcommand{\Foreign}[1]{\textit{#1}}
+
+\newcommand{\ChapNum}[1]{\hyperref[chapter:#1]{{\upshape #1}}}
+\newcommand{\SecNum}[1]{\hyperref[section:#1]{{\upshape #1}}}
+\newcommand{\SecRef}[1]{\hyperref[section:#1]{{\upshape §\;#1}}}
+\newcommand{\SecRefs}[1]{\hyperref[section:#1]{{\upshape §§\;#1}}}
+
+\newcommand{\Title}[1]{\textit{#1}}
+\newcommand{\Item}[1]{$#1$}% Upright parentheses
+\newcommand{\Vol}[1]{\textsc{\MakeLowercase{#1}}}
+\newcommand{\CGS}{\textsc{c.g.s.}}
+\newcommand{\NGC}{\text{\textsc{n.g.c.}}}
+\newcommand{\RA}{\text{\textsc{r.a.}}}
+\newcommand{\Indent}{\null\qquad}
+\renewcommand{\(}{{\upshape(}}
+\renewcommand{\)}{{\upshape)}}
+
+%% Miscellaneous mathematical formatting %%
+\newcommand{\Neg}{\phantom{-}}
+\newcommand{\9}{\phantom{9}}
+
+\newcommand{\FlushRunningHeads}{\clearpage\fancyhf{}}
+\newcommand{\InitRunningHeads}{%
+  \setlength{\headheight}{15pt}
+  \pagestyle{fancy}
+  \thispagestyle{empty}
+  \fancyhead[R]{\thepage}
+}
+
+\newcommand{\RHeads}[1]{\small\textsc{\MakeTextLowercase{#1}}}
+\newcommand{\SetRunningHeads}[2][C]{\fancyhead[#1]{\RHeads{#2}}}
+\newcommand{\BookMark}[2]{\phantomsection\pdfbookmark[#1]{#2}{#2}}
+
+\newcommand{\ChapHead}[2][\titlefontsize]{%
+ \section*{\centering\mdheadingfont\titlefontsize#1\MakeUppercase{#2}}
+}
+
+\newcommand{\SectTitle}[2][\sectionfontsize]{%
+  \section*{\centering#1\titlefont #2}
+}
+\newcommand{\SubsectTitle}[2][]{%
+  \subsubsection*{\indent#1#2}
+}
+
+\newcommand{\Preface}{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \BookMark{0}{Preface}
+  \SetRunningHeads{Preface}
+  \vspace*{0.5in}
+  \ChapHead{\MakeUppercase{Preface}}
+  \mainfontsize
+}
+
+\newcommand{\Matter}[2][]{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \BookMark{0}{#2}
+  \SetRunningHeads{#2}
+  \vspace*{0.5in}
+  \ChapHead{\MakeUppercase{#2}}
+  \ifthenelse{\not\equal{#1}{}}{%
+    \subsection*{\centering\normalfont\normalsize\itshape #1}}{}%
+  \label{appendix:#2}%
+  \addtocontents{toc}{\protect\ToCApp{#2}}
+  \mainfontsize
+}
+
+\newcommand{\Chapter}[2]{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \BookMark{0}{#1. #2}
+  \label{chapter:#1}
+  \vspace*{0.5in}
+  \ChapHead{\MakeUppercase{Chapter #1}}
+  \SectTitle[\sectionfontsize]{\MakeUppercase{#2}}
+  \addtocontents{toc}{\protect\ChapHead{CHAPTER #1}}
+  \addtocontents{toc}{\protect\SectTitle[\protect\small]{\MakeUppercase{#2}}}
+  \SetRunningHeads[L]{Ch.~#1}%
+  \mainfontsize
+}
+
+\newcommand{\Part}[2]{%
+  \addtocontents{toc}{\protect\SectTitle[\protect\small]{\protect\textsc{Part #1 #2}}}
+  \SectTitle[\small]{\textsc{Part #1 #2}}
+}
+
+% \PadTo[alignment]{width text}{visible text}
+\newcommand{\PadTo}[3][c]{%
+  \settowidth{\TmpLen}{$#2$}%
+  \makebox[\TmpLen][#1]{$#3$}%
+}
+\newcommand{\PadTxt}[3][c]{%
+  \settowidth{\TmpLen}{#2}%
+  \makebox[\TmpLen][#1]{#3}%
+}
+
+% For internal use by \Tag and \Eq
+\newcounter{SecNo}
+\newcommand{\Section}[3][]{
+  \subsubsection*{\sectionfontsize\indent#2 #3.}
+  \BookMark{1}{#2 #3}
+  \refstepcounter{SecNo}
+  \label{section:\theSecNo}
+  \addtocontents{toc}{\protect\ToCLine{\theSecNo}{#3}}
+  \ifthenelse{\equal{#1}{}}{%
+    \SetRunningHeads[C]{#3}%
+  }{%
+  %  \addtocontents{toc}{\protect\ToCLine{\theSecNo}{#1}}
+    \SetRunningHeads[C]{#1}%
+  }
+  \mainfontsize
+}
+
+% Cross-ref-able equation tags
+\newcommand{\Tag}[1]{%
+  \phantomsection\label{eqn:#1}\tag*{\ensuremath{#1}}%
+}
+\newcommand{\tTag}[1]{%
+  \phantomsection\label{eqn:#1}\ensuremath{#1}%
+}
+\newcommand{\Eq}[1]{%
+  \hyperref[eqn:#1]{\ensuremath{#1}}%
+}
+\newcommand{\EqNo}[1]{%
+  \hyperref[eqn:(#1)]{\ensuremath{#1}}%
+}
+
+\newcommand{\Subsection}[2][]{%
+  \ifthenelse{\equal{#1}{}}{%
+    \SubsectTitle[\normalfont\itshape\mainfontsize]{#2}
+  }{% else
+    \SubsectTitle[\normalfont\itshape\mainfontsize]{\Item{#1} #2}
+  }
+}
+
+\newcommand{\Summary}[1]{%
+  \SubsectTitle{\centering\normalfont\textsc{#1}}
+}
+
+\newcommand{\Signature}[2]{%
+  \medskip
+  \null\hfill#1\hspace{\parindent}
+  \medskip
+
+  {\large #2}%
+}
+
+\tolerance=100
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\dd}{\partial}
+\newcommand{\Wave}{\square}
+\newcommand{\Eta}{\mathrm{H}}
+\newcommand{\Kappa}{\mathrm{K}}
+\newcommand{\omicron}{o}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\Star}[1]{{}^{*}\!#1}
+\DeclareMathOperator{\cosec}{cosec}
+
+%[** TN: Hard-coded lengths to make arrows abut]
+\newcommand{\MuNuarrow}{\llap{$\begin{array}{@{}l@{}l@{}}
+    \raisebox{-1ex}{$\downarrow$} & \hspace*{-0.4em}\rightarrow \mu \\[-\baselineskip]
+    \nu
+  \end{array}$}
+}
+
+
+% Loosen spacing
+\setlength{\emergencystretch}{1em}
+\newcommand{\Loosen}{\spaceskip 0.375em plus 0.5em minus 0.25em}
+
+% Scratch pad for length calculations
+\newlength{\TmpLen}
+
+%% ToC formatting %%
+%\AtBeginDocument{\renewcommand{\contentsname}%
+%  {\protect\thispagestyle{empty}%
+%    \protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
+%}
+%\renewcommand{\contentsname}{\protect\thispagestyle{empty}\protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
+
+
+% Appendix entries
+\newcommand{\ToCApp}[1]{%
+\noindent\parbox[b]{\textwidth-2em}{%
+  \small\ToCBox{}\textsc{#1}\ \dotfill}\ToCPage{appendix:#1}%
+}
+
+% Page numbers
+\newcommand{\ToCPage}[1]{\makebox[2em][r]{\small\pageref{#1}}}
+% ** Approximate; refers to original page separators, no hyperlink
+\newcommand{\PgNo}[2][]{%
+  \ifthenelse{\equal{#1}{}}{%
+    \pageref*{pg:#2}%
+  }{%
+    \pageref{page:#2}%
+  }%
+}
+
+\newenvironment{ToCPar}{\begin{quote}\footnotesize}{\end{quote}}
+
+%% Index formatting
+\makeindex
+\makeatletter
+\renewcommand{\@idxitem}{\par\hangindent 30\p@\global\let\idxbrk\nobreak}
+\renewcommand\subitem{\idxbrk\@idxitem \hspace*{12\p@}\let\idxbrk\relax}
+\renewcommand{\indexspace}{\par\penalty-3000 \vskip 10pt plus5pt minus3pt\relax}
+
+\renewenvironment{theindex}{%
+  \setlength\columnseprule{0.5pt}\setlength\columnsep{18pt}%
+  \begin{multicols}{2}[{\Matter[The numbers refer to pages]{Index}\small}]%
+    \setlength\parindent{0pt}\setlength\parskip{0pt plus 0.3pt}%
+    \thispagestyle{empty}\let\item\@idxitem\raggedright%
+  }{%
+  \end{multicols}\FlushRunningHeads%
+}
+\makeatother
+
+%** Auxiliary index commands
+\newcommand{\indexfn}[1]{#1 (footnote)}
+
+\newcommand{\FrontMatter}{%
+  \newpage
+  \frontmatter
+}
+\newcommand{\MainMatter}{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \mainmatter
+  %\BookMark{-1}{Main Matter}
+}
+
+%\newcommand{\BackMatter}{%
+%  \FlushRunningHeads
+%  \InitRunningHeads
+%  \backmatter
+%  \BookMark{-1}{Back Matter}
+%}
+
+\newcommand{\TableofContents}{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \SetRunningHeads{Contents}
+  \BookMark{0}{Contents}
+  \tableofcontents
+}
+
+% Set the section number in a fixed-width box
+\newcommand{\ToCBox}[1]{\settowidth{\TmpLen}{999.}%
+  \makebox[\TmpLen][r]{#1}\hspace*{1em}%
+}
+% For internal use, to determine if we need the Section/Page line
+\newcommand{\ToCAnchor}{}
+
+% \ToCLine{SecNo}{Title}
+\newcommand{\ToCLine}[2]{%
+  \label{toc:#1}%
+  \ifthenelse{\not\equal{\pageref{toc:#1}}{\ToCAnchor}}{%
+    \renewcommand{\ToCAnchor}{\pageref{toc:#1}}%
+    %\noindent\makebox[\textwidth][r]{\scriptsize SECTION\hfill PAGE}\\[8pt]%
+  }{}%
+  \settowidth{\TmpLen}{9999}%
+  \noindent\strut\parbox[b]{\textwidth-\TmpLen}{\small%
+     \ToCBox{#1.}\hangindent4em#2\dotfill}%
+  \makebox[\TmpLen][r]{\small\pageref{section:#1}}%
+  \smallskip
+}
+
+\newcommand{\Bibitem}[1]{\par\noindent\hangindent2em\textsc{#1}}
+\newcommand{\Same}{\raisebox{0.5ex}{\rule{2em}{1pt}}}
+
+\tunemarkup{pgnexus10}{%
+\DeclareMathSizes{16}{13}{8}{7}
+\newcommand{\mainfontsize}{\fontsize{16}{18}\selectfont}
+\newcommand{\sectionfontsize}{\titlefont\fontsize{15}{15}\selectfont}
+\newcommand{\titlefontsize}{\fontsize{18}{18}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{14}{16}\selectfont}
+}
+
+\addto\captionsenglish{%
+\renewcommand{\contentsname}{\protect\thispagestyle{empty}\protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
+}
