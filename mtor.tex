@@ -8684,23 +8684,6 @@ body. It is clear that the kinematical velocity, or direction of the world-line
 of the body, corresponds to $u : v : w : 1$; the direction of $u' : v': w' : 1$ can be varied
 at will by choosing different coordinate-systems.
 
-% the following is present in 1923 edition only, removed from 1924 onward
-%In empty space the expression for~$\mf{t}_{\mu}^{\nu}$ can be simplified. Since $\mf{G} = 0$, \Eq{(58.8)}~becomes
-%\[
-%\mf{L} = \frac{\dd}{\dd x_{\nu}} \left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right).
-%\]
-%Hence
-%\begin{align*}
-%  16\pi\mf{t}_{\mu}^{\nu}
-%  &= \frac{\dd}{\dd x_{\mu}}\left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right)
-%  - \mf{g}_{\mu}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
-%  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
-%  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}} \left[
-%    -\{\alpha\beta, \nu\} + g_{\alpha}^{\nu} \frac{\dd}{\dd x_{\beta}} \log \sqrt{-g}\right]
-%  \Tag{(59.6)}
-%\end{align*}
-%by~\Eq{(58.52)}.
-
 The components $(\mf{t}_4^1,\mf{t}_4^2,\mf{t}_4^3)$ constitute a ``Poynting vector'' representing the flow of
 potential energy at any point.
 No physical significance can be attached to the localisation of the energy flow, but the \emph{total} flux of this
@@ -10762,24 +10745,28 @@ satisfies the conditions of a perfect fluid.
 Further equation~\Eq{(72.4)} determines the pressure at any distance from the
 centre.
 
-But the problem is only solved approximately, and the material here discussed
-is not strictly incompressible nor is it a perfect fluid. The values of
-$T_{1}^{1}$, $T_{2}^{2}$, $T_{3}^{3}$, $T_{4}^{4}$ refer to the particular coordinates used; these are arbitrary
-and do not correspond to natural measure. So long as the sphere is small, the
-difference does not amount to much; but for large spheres the solution ceases
-to correspond to a problem of any physical importance since it does not refer
-to natural measure. It is unfortunate that the solution breaks down for large
-spheres, because the existence of a limit to the size of the sphere is one of the
-most interesting objects of the research.
+The components of an energy-tensor are usually altered when a transformation of coordinates is made, so that before
+interpreting them in terms of pressure and density it is necessary to ascertain that the appropriate coordinate-system
+has been used, viz. natural coordinates.
+To pass from the coordinates $(r,\theta,\phi,t)$ to the natural coordinates at any point it is necessary to make a
+transformation of scale of $r$ and $t$ at that point.
+This transformation leaves the \emph{mixed} tensor $T_{\mu}^{\nu}$ unaltered, although it would alter $T^{\mu\nu}$
+and $T_{\mu\nu}$.
+Accordingly the results~\Eq{(72.31)} and~\Eq{(72.32)} are valid for natural measure, and the arbitrariness of our
+original coordinate-system does not affect the definiteness of our conclusions.
 
-Clearly we need a solution in which the density referred to natural measure
-is constant throughout; i.e.\ $T$~constant, instead of $T_{4}^{4}$~constant. The condition
-for a perfect fluid also needs modification. (But it would be of considerable
-interest to find the solution for a solid capable of supporting non-isotropic
-stress, if the problem of the fluid proves too difficult.) So far as I know, no
-progress has been made with the exact solution of this problem. It would
-throw interesting light on the manner in which the radius of space contracts
-as the size of the sphere continually increases.
+But in concluding that the solution represents a perfect fluid of uniform density, the density referred to is $T_4^4$
+or $\rho_{00}$. For reasons explained in~\SecRef{54} this condition does not seem correct for an incompressible fluid.
+We need a solution in which $T$ or $\rho_0$ is constant throughout the sphere; Schwarzschild has not solved this
+problem.
+For large spheres the central pressure is enormous and the difference of the two solutions may be considerable.
+
+I make this comment with some hesitation because it is difficult to be certain what limit an actual liquid would
+approach when the enormously increasing pressure is unable to bring the ultimate particles appreciably nearer
+together.
+In a gas the pressure is represented by molecular velocities and its nature is understood.
+Here it may be a Maxwellian electromagnetic stress, in which case the conclusion that $\rho_0$ is constant continues
+to hold true. But it may be some more mysterious quantum manifestation, as to which we can make no prediction.
 
 If it is assumed that Schwarzschild's result
 \[
