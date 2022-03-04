@@ -8683,21 +8683,31 @@ body. It is clear that the kinematical velocity, or direction of the world-line
 of the body, corresponds to $u : v : w : 1$; the direction of $u' : v': w' : 1$ can be varied
 at will by choosing different coordinate-systems.
 
-In empty space the expression for~$\mf{t}_{\mu}^{\nu}$ can be simplified. Since $\mf{G} = 0$, \Eq{(58.8)}~becomes
-\[
-\mf{L} = \frac{\dd}{\dd x_{\nu}} \left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right).
-\]
-Hence
-\begin{align*}
-  16\pi\mf{t}_{\mu}^{\nu}
-  &= \frac{\dd}{\dd x_{\mu}}\left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right)
-  - \mf{g}_{\mu}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
-  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
-  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}} \left[
-    -\{\alpha\beta, \nu\} + g_{\alpha}^{\nu} \frac{\dd}{\dd x_{\beta}} \log \sqrt{-g}\right]
-  \Tag{(59.6)}
-\end{align*}
-by~\Eq{(58.52)}.
+% the following is present in 1923 edition only, removed from 1924 onward
+%In empty space the expression for~$\mf{t}_{\mu}^{\nu}$ can be simplified. Since $\mf{G} = 0$, \Eq{(58.8)}~becomes
+%\[
+%\mf{L} = \frac{\dd}{\dd x_{\nu}} \left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right).
+%\]
+%Hence
+%\begin{align*}
+%  16\pi\mf{t}_{\mu}^{\nu}
+%  &= \frac{\dd}{\dd x_{\mu}}\left(\mf{g}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\right)
+%  - \mf{g}_{\mu}^{\alpha\beta}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
+%  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}}\, \frac{\dd\mf{L}}{\dd\mf{g}_{\nu}^{\alpha\beta}}\displaybreak[0] \\
+%  &= \mf{g}^{\alpha\beta}\, \frac{\dd}{\dd x_{\mu}} \left[
+%    -\{\alpha\beta, \nu\} + g_{\alpha}^{\nu} \frac{\dd}{\dd x_{\beta}} \log \sqrt{-g}\right]
+%  \Tag{(59.6)}
+%\end{align*}
+%by~\Eq{(58.52)}.
+
+The components $(\mf{t}_4^1,\mf{t}_4^2,\mf{t}_4^3)$ constitute a ``Poynting vector'' representing the flow of
+potential energy at any point.
+No physical significance can be attached to the localisation of the energy flow, but the \emph{total} flux of this
+vector through a closed surface in empty space will by~\Eq{(59.3)} give correctly the rate of diminution of material
+and potential energy $(\mf{T}_4^4 + \mf{t}_4^4)$ within the surface.
+If there is within the surface a material system in periodic motion, coordinates will naturally be chosen so that
+$\mf{t}_4^4$ undergoes no secular change; the flux will then give the secular change of $\mf{T}_4^4$, i.e. the loss of
+energy from the material system due to the gravitational waves produced by it.
 
 \Section{60.}{Action}
 
