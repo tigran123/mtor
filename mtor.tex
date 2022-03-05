@@ -3157,6 +3157,49 @@ that $A(\mu\nu)$~is a covariant tensor obeying the transformation law~\Eq{(23.22
 
 We shall cite this theorem as the ``rigorous quotient theorem.''
 
+With reference to the statement that an equation such as~\Eq{(24.1)} does not afford a \emph{rigorous} proof of
+the tensor character of~$A(\mu\nu)$, it is desirable to give an example of failure.
+Let~$F(\mu\nu)$ be any expression antisymmetrical in~$\mu$ and~$\nu$, and let~$G^{\mu\nu}$ be a symmetrical tensor,
+so that
+\[
+F(\mu\nu) = -F(\mu\nu) \quad G^{\mu\nu} = G^{\nu\mu}.
+\]
+Then
+\begin{align*}
+F(\mu\nu)G^{\mu\nu} & = - F(\nu\mu)G^{\nu\mu}\\
+                    & = - F(\mu\nu)G^{\mu\nu}
+\end{align*}
+by interchanging the dummy suffixes. Hence
+\[
+F(\mu\nu)G^{\mu\nu} = 0.
+\]
+Thus the product of~$F(\mu\nu)$ and~$G^{\mu\nu}$ is invariant; but it is fallacious to argue from this
+that~$F(\mu\nu)$ must be a covariant tensor, since we have seen that any antisymmetrical expression will have
+this property.
+
+An equation,~$A(\mu\nu)G^{\mu\nu} = \text{invariant}$, only allows us to infer that the
+symmetrical part of~$A(\mu\nu)$ is a tensor; the antisymmetrical part is artjitrary.
+Similarly if~$G^{\mu\nu}$ is an antisymmetrical tensor, the inference is that the antisymmetrical part
+of~$A(\mu\nu)$ is a tensor.
+
+Thus when in~\SecRef{29} we find that~$A_{\mu\nu}$ multiplied by the symmetrical tensor~$dx_\mu/ds \cdot dx_\nu/ds$
+is an invariant, the proper deduction is that the symmetrical part of~$A_{\mu\nu}$ is a tensor.
+To complete the proof of~\Eq{(29.3)} it is necessary to show that the antisymmetrical part,
+viz.~$\frac{1}{2}(\dd A_\mu/{\dd x_\nu} - \dd A_\nu/{\dd x_\mu})$, is also a tensor.
+The reader will easily verify this by determining its transformation law, using~\Eq{(23.12)}.
+
+Similarly the proof that~$g_{\mu\nu}$ is a tensor at the beginning of~\SecRef{25} is not rigorous.
+Any antisymmetrical expression could be added to~$g_{\mu\nu}$ without altering $ds^2$, and the proof should take
+account of the fact that~$g_{\mu\nu}$ is defined as a symmetrical expression.
+A rigorous proof is easily supplied by finding the transformation law as suggested in~\SecRef{15}.
+
+Although the chance of a breakdown of the general deduction from covariant and contravariant dimensions is somewhat
+greater than I originally realised, I do not regret having employed the method extensively in this book.
+It is desirable that the student's course of reading should train him instinctively to ``spot'' tensors in this way,
+and there is never any serious difficulty in confirming his discoveries by more rigorous tests.
+Although cases of failure are easily constructed artificially, I have yet to hear of a natural instance of this
+happening.
+
 \Section{25.}{The fundamental tensors}
 \index{Fundamental velocity!tensors}%
 
@@ -6996,6 +7039,71 @@ equivalent, and the algebra may be simplified; but although this simplification
 does not involve any loss of generality, it is liable to obscure the deeper
 significance of the theory, and it is not usually desirable to adopt it.
 
+The quantity obtained by dividing a tensor by~$\sqrt{-g}$ may be called a \emph{tensor-volume}.
+We shall indicate tensor-volumes by calligraphic type, so that
+\[
+\mf{T}^{\mu\nu} = T^{\mu\nu}\sqrt{-g} \quad \mc{T}^{\mu\nu} = T^{\mu\nu}/\sqrt{-g}
+\]
+Evidently~$\mf{T}_{\mu\nu}\mc{T}^{\mu\nu}$ is an invariant, German character cancelling calligraphic.
+
+By~\Eq{(49.2)} $dV$ an invariant-volume and should be denoted by $d\mc{V}$.
+
+The coefficient~$\epsilon_{\alpha\beta\gamma\delta}$ is at the same time a contravariant tensor-density
+and a covariant tensor-volume.
+We may thus write
+\[
+\epsilon_{\alpha\beta\gamma\delta} = \mc{E}_{\alpha\beta\gamma\delta} = \mf{E}_{\alpha\beta\gamma\delta}
+\]
+The product~$\mc{E}_{\alpha\beta\gamma\delta}\mf{E}^{\alpha\beta\gamma\delta}$ should evidently be invariant;
+this is satisfied because by~\Eq{(48.31)} it has the constant value $4!$.
+
+By means of this coefficient we can associate a covariant tensor-volume with any antisymmetrical contravariant tensor.
+This process is especially important in connection with space-elements of $1,2,3$ or $4$ dimensions, which are
+antisymmetrical contravariant tensors.
+For example, the four-dimensional element of volume is measured by either the tensor~$dV^{\alpha\beta\gamma\delta}$
+or the invariant volume $d\mc{V}$ connected by the relation
+\[
+(4!)d\mc{V} = \mc{E}_{\alpha\beta\gamma\delta} dV^{\alpha\beta\gamma\delta}
+\]
+Similarly the surface-element is represented by~$dS^{\alpha\beta}$ or~$d\mc{S}'_{\alpha\beta}$, where
+\[
+d\mc{S}'_{\alpha\beta} = \mc{E}_{\alpha\beta\gamma\delta} dS^{\gamma\delta}
+\]
+The necessity for inserting the accent should be noticed; the result of this operation does not
+give~$d\mc{S}_{\alpha\beta}$ which according to previous definitions is derived from~$dS^{\alpha\beta}$ by
+lowering the two suffixes and dividing by~$\sqrt{-g}$.
+
+The representation of surface-elements by an adjoint vector in elementary three-dimensional theory arises in this way.
+If
+\[
+d\mc{S}'_\alpha = \mc{E}_{\alpha\beta\gamma} dS^{\beta\gamma},
+\]
+the vector-volume~$d\mc{S}'_\alpha$ can be used as a measure of the surface-element.
+The elementary theory (restricted to rectangular coordinates) does not discriminate between vectors and vector-volumes.
+
+From a covariant antisymmetrical tensor~$F_{\alpha\beta}$ we can derive two different
+tensor-densities~$\mf{F}^{\alpha\beta}$ and~$\mf{F}'^{\alpha\beta}$, thus
+\[
+\mf{F}^{\alpha\beta} = g^{\alpha\gamma} g^{\beta\delta} F_{\gamma\delta} \sqrt{-g} \quad \mf{F}'^{\alpha\beta} = \mf{E}^{\alpha\beta\gamma\delta} F_{\gamma\delta};
+\]
+the latter is obtained merely by rearranging the components of~$F_{\alpha\beta}$.
+
+As an illustration we can prove that
+\[
+|\mf{g}^{\mu\nu}| = |g_{\mu\nu}|
+\]
+
+For this equation is equivalent to
+\[
+\mc{E}_{\alpha\beta\gamma\delta} \mc{E}_{\epsilon\zeta\eta\theta}
+  \mf{g}^{\alpha\epsilon} \mf{g}^{\beta\zeta} \mf{g}^{\gamma\eta} \mf{g}^{\delta\theta} =
+\mf{E}^{\alpha\beta\gamma\delta} \mf{E}^{\epsilon\zeta\eta\theta}
+  g_{\alpha\epsilon} g_{\beta\zeta} g_{\gamma\eta} g_{\delta\theta}
+\]
+Both sides are seen to have the same dimensions, viz. those of the square of an invariant-density, and so transform
+by the same law.
+In natural coordinates the two determinants are identical; hence their values are equal in all coordinate-systems.
+
 \Section{50.}{The problem of the rotating disc}
 \index{Problem!of rotating disc}%
 \index{Rotating disc}%
@@ -7084,6 +7192,20 @@ by the elementary transformation~\Eq{(15.3)}.
 
 We see that the contraction is one quarter of that predicted by a crude
 application of the FitzGerald formula to the circumference.
+
+This proof has been criticised as defective in that no explanation is given as to why the thickness~$b$ of the disc
+is assumed to be unaltered by rotation.
+We may examine this question by the same general method.
+The essential point is that in an incompressible and (it should be added) perfectly rigid disc there is no response
+of any kind to applied stress, so that stresses may be ignored;
+any difference between rotating and non-rotating elements must be a difference of \emph{description,} not of
+intrinsic structure.
+Thus the configuration of molecules when referred to proper-coordinates will be the same in rotating as in
+non-rotating elements of the material.
+But the transformation to proper-coordinates does not affect~$x_3$, so that the spacing of the molecules along this
+coordinate is unaltered by the rotation.
+The thickness of the disc---or length of the chain of molecules extending from the lower to the
+upper surface---is accordingly unaltered.
 
 \Section{51.}{The divergence of a tensor}
 \index{Contracted derivative (divergence)}%
