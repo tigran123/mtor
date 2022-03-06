@@ -277,7 +277,6 @@
 
 %% Index formatting
 \makeindex
-\makeatletter
 \renewcommand{\@idxitem}{\par\hangindent 30\p@\global\let\idxbrk\nobreak}
 \renewcommand\subitem{\idxbrk\@idxitem \hspace*{12\p@}\let\idxbrk\relax}
 \renewcommand{\indexspace}{\par\penalty-3000 \vskip 10pt plus5pt minus3pt\relax}
@@ -290,28 +289,16 @@
   }{%
   \end{multicols}\FlushRunningHeads%
 }
-\makeatother
 
 %** Auxiliary index commands
 \newcommand{\indexfn}[1]{#1 (footnote)}
 
-\newcommand{\FrontMatter}{%
-  \newpage
-  \frontmatter
-}
 \newcommand{\MainMatter}{%
   \FlushRunningHeads
   \InitRunningHeads
   \mainmatter
   %\BookMark{-1}{Main Matter}
 }
-
-%\newcommand{\BackMatter}{%
-%  \FlushRunningHeads
-%  \InitRunningHeads
-%  \backmatter
-%  \BookMark{-1}{Back Matter}
-%}
 
 \newcommand{\TableofContents}{%
   \FlushRunningHeads
