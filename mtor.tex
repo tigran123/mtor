@@ -70,7 +70,7 @@ structure of the world at the time.
 As is usually common in the poisoned atmosphere permeated by the ``spirit of democracy'',
 which, as we know, fosters the election of base and ignorant rulers and glorifies mediocrity by placing the
 universal suffrage in the hands of uneducated and indolent majorities, the science was forced to pursue the false
-materialistic goals of a few mediocre men like Niels Bohr and Paul Dirac, forgetting for a season
+materialistic goals of a few mediocre (relatively speaking) men like Niels Bohr and Max Born, forgetting for a season
 the direction of the brilliant contributions made by the real lovers of truth---men like Arthur Eddington,
 James Jeans, Louis de Broglie in theoretical physics,
 Robert Millikan in experimental physics, William Sadler in medicine and psychology and others.
@@ -95,7 +95,7 @@ It devolves upon them to build the new civilisation on the ruins made by those w
 which is an inexorable outcome of evolutionary processes, whenever beauty is substituted with ugliness,
 truth with falsehood and goodness with evil and selfish deceit.
 
-I was pleasantly surpsised when I discovered that a newly typeset version of Eddington's
+I was pleasantly surprised when I discovered that a newly typeset version of Eddington's
 ``The Mathematical Theory of Relativity'' has been produced recently by Andrew~D.~Hwang,
 a professor of mathematics at College of the Holy Cross, who made the fruits of his labours of love
 available under Public Domain as part of the \emph{Gutenberg Project} \cite{Hwang1}.
@@ -7503,6 +7503,43 @@ Comparing \Eq{(52.51)} and \Eq{(52.52)} we see that the required result is estab
 for coordinates chosen so as to have the property~\Eq{(52.3)} at the point
 considered; and since it is a tensor equation it must hold true for all systems
 of coordinates.
+
+The four identities can be obtained in a more elegant way as follows.
+We must first establish the identity
+\[
+(B^{\epsilon}_{\mu\nu\sigma})_\tau + (B^{\epsilon}_{\mu\sigma\tau})_\nu + (B^{\epsilon}_{\mu\tau\nu})_\sigma = 0,
+\]
+where the final suffix denotes covariant differentiation.
+To prove this we evaluate the left-hand side in terms of $3$-index symbols by substituting~\Eq{(34.4)}
+in~\Eq{(30.4)};
+but it is only necessary to proceed far enough to see that the second derivatives of the $3$-index symbols
+cancel out cyclically, and that the first derivatives occur only in combination with a $3$-index symbol itself as
+co-factor.
+Hence the whole expression will vanish when the $3$-index symbols (but not their derivatives) vanish,
+i.e.\ in natural coordinates.
+The result is thus proved for natural coordinates, and since it is a tensor equation it will be true for all
+coordinate-systems.
+
+Lowering the suffix~$\epsilon$, and using the antisymmetrical properties of~$B_{\mu\nu\sigma\epsilon}$ we have
+\[
+(B_{\mu\nu\sigma\epsilon})_\tau - (B_{\mu\tau\sigma\epsilon})_\nu + (B_{\epsilon\nu\tau\mu})_\sigma = 0.
+\]
+Hence, multiplying by~$g^{\sigma\epsilon}g^{\mu\tau}$,
+\[
+(G^\tau_\nu)_\tau - (G)_\nu + (G^\sigma_\nu)_\sigma = 0,
+\]
+which is equivalent to~\Eq{(52.1)}.
+
+The crude statement in~\SecRef{37}, that owing to the existence of these 4 identical relations the number of
+gravitational equations is effectively reduced to 6, requires some amplification.
+A relation between the first derivatives of the~$G_{\mu\nu}$ is not so restrictive as a relation between
+the~$G_{\mu\nu}$ themselves, and it is not true that if 6 of the~$G_{\mu\nu}$ are made to vanish the remaining 4 will
+identically vanish.
+If we consider the 40 covariant derivatives~$(G^\nu_\mu)_\sigma$, 4 of these depend on the others, so that the
+vanishing of 36 of the derivatives ensures that all 40 will vanish.
+The effect is that the scheme of equations for determining the~$g_{\mu\nu}$ is incomplete by 4,
+so that there remains a four-fold arbitrariness in the values of the~$g_{\mu\nu}$ and therefore of
+the coordinate-system.
 
 \Section{53.}{The material energy-tensor}
 \index{Energy-tensor of matter}%
