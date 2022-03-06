@@ -10,3 +10,5 @@ as well as the Russian translation (1934), which included some improvements,
 including those made for the German translation.
 
 You can build the PDF file yourself or you can download it from [http://www.bibles.org.uk/books.html](http://www.bibles.org.uk/books.html)
+
+![Screenshot](images/screenshot.png)
