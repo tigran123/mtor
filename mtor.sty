@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}[2000/06/01]
 \ProvidesPackage{mtor}[2022/02/24 v1.0]
 
-\RequirePackage{indentfirst,amsmath,amsfonts,amssymb,fancyhdr,theorem,enumerate,makeidx,multicol,textcase,fancybox,color,xltxtra,polyglossia,graphicx,calc,gensymb,hyphenat}
+\RequirePackage{indentfirst,amsmath,amsfonts,amssymb,fancyhdr,theorem,enumerate,makeidx,multicol,textcase,fancybox,color,xltxtra,polyglossia,graphicx,calc,gensymb,hyphenat,etoolbox}
+
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
 
 \setdefaultlanguage{english}
 
@@ -357,3 +359,4 @@
 
 \definecolor{mygreen}{rgb}{0.0, 0.4, 0.0}
 \newcommand{\titlesepbig}{{\usefont{U}{webo}{xl}{n}\Large\textcolor{mygreen}{ahb}}}
+\newcommand{\myurl}[1]{\href{#1}{#1}}
