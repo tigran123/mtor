@@ -115,7 +115,6 @@ electromagnetism by Hermann Weyl, masterfully presented by A.S.~Eddington.
 
 \Signature{Tigran Aivazian.}{6 \emph{March} 2022.}
 
-\newpage
 \begin{thebibliography}{100}
 \bibitem{Block1}
 Matthew~Block.
@@ -8624,7 +8623,8 @@ confirms his calculation.
 
 The result is that a rod of moment of inertia~$I$, spinning with angular velocity~$\omega$, loses energy at the rate
 \[
-\frac{32}{5} k I^2 \omega^6 \Tag{(57.101)}
+\frac{32}{5} k I^2 \omega^6
+\Tag{(57.101)}
 \]
 per unit time, where~$k = 1$ for gravitational units and~$k=2.7\cdot10^{-60}$ for C.G.S. units.
 The rate of decay of the rotation is in all practical cases exceedingly small.
@@ -8652,11 +8652,11 @@ brings out this aspect of the problem.
 
 Setting~$\mu=4$ in~\Eq{(55.6)}
 \[
-\frac{\dd\mf{T}^\nu_4}{\dd x_\nu} = \tfrac{1}{2}\mf{T}^{\alpha\beta}\frac{g_{\alpha\beta}}{\dd t}
+\frac{\dd\mf{T}^\nu_4}{\dd x_\nu} = \tfrac{1}{2}\mf{T}^{\alpha\beta}\frac{g_{\alpha\beta}}{\dd t}.
 \]
 Hence integrating over a three-dimensional region enclosing the rod
 \[
-\frac{\dd}{\dd t} \int\mf{T}^4_4 dV = \tfrac{1}{2}\int\mf{T}^{\alpha\beta}\frac{\dd g_{\alpha\beta}}{\dd t} dV
+\frac{\dd}{\dd t} \int\mf{T}^4_4 dV = \tfrac{1}{2}\int\mf{T}^{\alpha\beta}\frac{\dd g_{\alpha\beta}}{\dd t} dV,
 \Tag{(57.102)}
 \]
 since the other terms on the left yield surface integrals which vanish because the boundary does not pass through
@@ -8664,8 +8664,151 @@ matter.
 Equation~\Eq{(57.102)} expresses the rate of change of material energy~$T^4_4$ within the region,
 i.e.\ in the rod which is the only material system there.
 
+In order to calculate the value of~$\dd g_{\alpha\beta}/\dd t$ to be substituted in~\Eq{(57.102)} we use~\Eq{(57.7)}
+\[
+\Wave h_{\alpha\beta} = 2 G_{\alpha\beta} = -16\pi(T_{\alpha\beta} - \tfrac{1}{2}\delta_{\alpha\beta} T).
+\Tag{(57.103)}
+\]
+The solution of this wave-equation is studied fully in~\SecRef{74}(d).
+We have by~\Eq{(74.71)}
+\[
+h_{\alpha\beta} = -4 \int\left[\frac{T'_{\alpha\beta} - \tfrac{1}{2}\delta_{\alpha\beta} T'}{r(1-v_r)}\right] dV'.
+\Tag{(57.104)}
+\]
+Here the square bracket is used to indicate appropriately antedated values; $r$ is the distance from the moving
+source~$dV'$ at the appropriate moment to the point where~$h_{\alpha\beta}$ is to be calculated;
+and~$v_r$ is the component velocity of~$dV'$ towards this point.
+Although we shall find it necessary to retain somewhat high powers of the velocity in the coefficients of
+periodic terms, it is unnecessary to take account of the FitzGerald factor~$\beta$ occurring as a constant multiplier
+independent of the time.
+For the same reason we can replace~$\mf{T}^{\alpha\beta}$ by~$T^{\alpha\beta}$ in~\Eq{(57.102)}.
+Squares of~$h_{\alpha\beta}$ have been neglected.
 
+Hence by~\Eq{(57.102)} and~\Eq{(57.104)} the rate of loss of energy of the rod is
+\[
+2\int\int\left\{T^{\alpha\beta}\frac{\dd}{\dd t}\left[\frac{T'_{\alpha\beta}}{r(1-v_r)}\right] - \tfrac{1}{2} T\frac{\dd}{\dd t}\left[\frac{T'}{r(1-v_r)}\right]\right\} dV dV',
+\Tag{(57.105)}
+\]
+since~$T^{\alpha\beta}\delta_{\alpha\beta}=T$ to the adopted order of approximation.
+This integral exhibits the loss of energy as arising from the mutual action of pairs of elements of
+the rod,~$dV$ and~$dV'$.
 
+The antedated values can be expanded in terms of contemporaneous values of~$r$ and~$T'_{\alpha\beta}$
+by the series\footnotemark\footnotetext
+      {See~\Eq{(74.94)}.}
+\[
+\left[\frac{T'_{\alpha\beta}}{r(1-v_r)}\right] = \frac{T'_{\alpha\beta}}{r} - \frac{d}{dt}T'_{\alpha\beta} +
+                 \sum_2^\infty\frac{(-1)^n}{n!}\frac{d^n}{dt^n}(r^{n-1}T'_{\alpha\beta}),
+\Tag{(57.106)}
+\]
+the quantities on the right \emph{not} being antedated.
+
+Let the rod, spinning in the plane of~$xy$, be along the axis of~$x$ at the instant~$t=0$, the origin being at
+the centre.
+Let~$dV$ then be at~$x$ and~$dV'$ at~$x'$.
+The varying distance of the source~$dV'$ from the fixed point~$x$ instantaneously occupied by~$dV$, is
+\[
+r=\sqrt{x^2 + x'^2 - 2 x x' \cos\omega t}.
+\]
+This must be used in~\Eq{(57.106)} and~$t$ must be made zero after the differentiations.
+In the present application we can simplify~\Eq{(57.106)} by noting that if~$T^{\alpha\beta}$ is any component
+which does not vanish when~$t=0$, $T'_{\alpha\beta}$ will be an even function of~$t$,
+so that derivatives of odd order disappear.
+Accordingly for our application
+\begin{multline*}
+\frac{\dd}{\dd t}\left[\frac{T'_{\alpha\beta}}{r(1-v_r)}\right] = -\frac{d^2}{dt^2}T'_{\alpha\beta} -
+                        \frac{1}{6}\frac{d^4}{dt^4}\{T'_{\alpha\beta}(x^2 + x'^2 - 2 x x' \cos\omega t)\}\\
+                   -\frac{1}{120}\frac{d^6}{dt^6}\{T'_{\alpha\beta}(x^2 + x'^2 - 2 x x' \cos\omega t)^2\} - \ldots.
+\Tag{(57.107)}
+\end{multline*}
+This must be substituted in~\Eq{(57.105)} and the earliest non-vanishing terms picked out.
+Assuming that the rod is symmetrical (but not necessarily of uniform density) terms containing an
+odd power of~$x$ or~$x'$ will vanish on integration.
+
+\Subsection[(a)]{Stress components, $T^{11}, T^{22}$.}
+
+These are small compared with the momentum and mass components and only the first term of the expansion~\Eq{(57.107)}
+is required.
+Since~$r$ does not appear, the double integration breaks up into the product of two independent integrals.
+The contribution to~\Eq{(57.105)} is
+\[
+-2\int T^{11} dV \cdot \frac{d^2}{dt^2}\int T'_{11} dV' - 2\int T^{22} dV \cdot \frac{d^2}{dt^2}\int T'_{22} dV'.
+\Tag{(57.108)}
+\]
+
+If~$\sigma$ is the line-density of the rod~$T^{22} dV = \sigma\omega^2 x^2 dx$, so that
+\[
+\int T^{22} dV = I\omega^2.
+\]
+The component~$T^{11}$ represents the tension of the rod and it is easily found by elementary dynamics that its
+integral is $-I\omega^2$.
+
+For the moving source the corresponding integrals are~$I\omega^2\cos 2\omega t$ and~$-I\omega^2\cos 2\omega t$.
+Hence~\Eq{(57.108)} gives the result~$16I^2\omega^6$.
+
+\Subsection[(b)]{Momentum components, $T^{24}, T^{42}$.}
+
+We have $T^{24}dV = \sigma\omega x dx$, $T'_{24}dV' = -\sigma'\omega x' dx' \cos\omega t$.
+
+The first term of~\Eq{(57.107)} now yields nothing, owing to the odd powers of~$x$ and~$x'$.
+We take the second term and obtain
+\[
+-2\int\int\sigma\omega x dx \cdot \sigma'\omega x' dx'\cdot\tfrac{1}{6} (2\omega)^4 x x' = -\tfrac{16}{3}I^2\omega^6.
+\]
+$T^{42}$ gives an equal contribution, making a total of~$-\tfrac{32}{3}I^2\omega^6$.
+
+\Subsection[(c)]{Mass components, $T^{44}, T$.}
+\[
+T^{44} dV = \sigma dx, \quad T'_{44} dV' = \sigma dx'.
+\]
+The third term of~\Eq{(57.107)} is now required, giving
+\[
+2\int\int\sigma dx\cdot\sigma' dx' \cdot\tfrac{1}{120}(2\omega)^6\cdot 2 x^2 x'^2 = \tfrac{32}{15}I^2\omega^6.
+\]
+The proper-density~$T$ and the coordinate-density~$T^{44}$ are practically the same, so that the term in~$T$
+cancels half the above amount, leaving~$\tfrac{16}{15}I^2\omega^6$.
+
+Gathering together~$(a)$,~$(b)$ and~$(c)$ the rate of loss of energy is
+\[
+(16-\tfrac{32}{3}+\tfrac{16}{15})I^2\omega^6=\tfrac{32}{5}I^2\omega^6,
+\]
+agreeing with the result already stated.
+
+If~$a$ is the order of magnitude of the linear dimensions of the system and~$v$ of the velocities,
+this result is of order~$(M/a)^2 v^6$.
+Since~$h_{44}$ is of order~$(M/a)$ the neglect of higher powers of~$h_{\mu\nu}$ excludes from the discussion terms
+of order~$(M/a)^3 v^2$ and~$(M/a)^4 v^2$.
+The former may possibly, and the latter will almost certainly occur;
+the approximation accordingly assumes that such terms are negligible in comparison with~$(M/a)^2 v^6$.
+There is no theoretical difficulty in the existence of cohesive systems with small mass and large velocities
+for which our approximation is valid; but for gravitational systems,~$M/a$ is necessarily of the same order
+of magnitude as~$v^2$, and the approximation fails.
+Thus the decay of energy (if any) of a double star cannot be investigated by this method.
+
+In a sense it is true that our success in solving the problem for cohesive systems and our failure for
+gravitational systems is due to our comparative ignorance of the nature of cohesive forces.
+Presumably cohesive forces are propagated with the fundamental velocity and our assumption that the tension
+in the spinning rod lies wholly in the line of the rod may not be strictly true.
+On the other hand the cohesion is between neighbouring particles and we must not think of it as propagated
+from end to end of the rod in the way that the gravitational attraction is propagated.
+For this reason it seems plausible to neglect the propagation of cohesion; but even if the effect is
+appreciable we can scarcely suppose that the lag of the cohesive forces taken alone would \emph{accelerate}
+the rotation of the rod, so that there seems no possibility of the gravitational loss of energy found in this
+discussion being neutralised.
+The problem of the double star is more difficult; we should have to take account of the effect of the
+gravitational field in disturbing the propagation of its own potentials and we cannot be sure that even the
+sign of~\Eq{(57.101)} is correct.
+
+The spontaneous loss of energy of a spinning rod is interesting in connection with the problem of absolute rotation.
+We used often to hear the suggestion that a moving star would gradually be brought to rest owing to the
+back-pressure of its own radiation.
+Obviously there must be a fallacy\footnotemark\footnotetext
+     {The actual fallacy lay in the neglect of the gradual loss of mass of the star which is radiating energy---a
+      non-vanishing force~$d(Mv)/dt$ is not inconsistent with uniform velocity if~$M$ varies.}
+in the argument, since there is no ``rest'' for the star to be brought to.
+Similarly it might be thought that the conclusion that a spinning rod spontaneously comes to rest must be fallacious.
+But the relativity theory does not deny absolute rotation;
+or at least if it does, its denial has not the same plain meaning as its denial of absolute translation.
 
 \Section{58.}{Lagrangian form of the gravitational equations}
 
@@ -10515,11 +10658,7 @@ as we shall see.
 \index{Spectral lines, displacement!in nebulae}%
 \index{Spherical world}%
 
-If in~\Eq{(67.33)} we write
-\[
-r = R\sin\chi,
-\]
-we obtain
+If in~\Eq{(67.33)} we write~$r = R\sin\chi$, we obtain
 \[
 \left.
 \begin{gathered}
@@ -10540,7 +10679,7 @@ in de~Sitter's empty world. Thus \Eq{(39.31)}~may be written
 \frac{d^{2}r}{ds^{2}}
   - \frac{1}{2}\, \frac{\gamma'}{\gamma} \left(\frac{dr}{ds}\right)^{2}
   - r\gamma \left(\frac{d\phi}{ds}\right)^{2}
-  - \tfrac{1}{2}\gamma\gamma' \left(\frac{dt}{ds}\right)^{2} = 0.
+  + \frac{1}{2}\gamma\gamma' \left(\frac{dt}{ds}\right)^{2} = 0.
 \]
 Whence
 \[
@@ -10550,6 +10689,18 @@ Whence
   + \tfrac{1}{3}\lambda r(1 - \tfrac{1}{3}\lambda r^{2}) \left(\frac{dt}{ds}\right)^{2}.
   \Tag{(70.21)}
 \]
+
+Equation~\Eq{(70.21)} can at once be simplified by means of~\Eq{(70.1)} giving
+\[
+\frac{d^2 r}{ds^2} - r\left(\frac{d\phi}{ds}\right)^2 = \tfrac{1}{3}\lambda r.
+\]
+Since the integral of areas
+\[
+r^2\frac{d\phi}{ds} = h
+\]
+is unaltered, the motion in de Sitter's world is the same as under a central repulsion varying directly with~$r$,
+except that the time in the orbit corresponds to~$s$ not~$t$.
+Some of the conclusions in this section are reached more directly by noticing this.
 
 For a particle at rest
 \[
@@ -10575,6 +10726,12 @@ filled with matter having negligible velocity. It is sometimes urged against
 de~Sitter's world that it becomes non-statical as soon as any matter is inserted
 in it. But this property is perhaps rather in favour of de~Sitter's theory than
 against it.
+
+It is not impossible that the dimensions of our galaxy may be such that in the remoter parts this cosmical
+repulsion exceeds the ordinary gravitation of the system, thus setting a limit to the extent of the permanent
+aggregation of stars.
+Possibly also the same condition may have a bearing on the development of spiral nebulae if these are external
+galaxies.
 
 One of the most perplexing problems of cosmogony is the great speed of
 the spiral nebulae. Their radial velocities average about $600$~km.\ per~sec.\ and
@@ -10687,7 +10844,7 @@ infinite, and the tracks of light-rays are the solutions of
 \[
 \frac{d^{2}u}{d\phi^{2}} + u = 0,
 \]
-i.e.\ straight lines. Determination of distance by parallax-measurements rests
+i.e.\ straight lines. Determination of distance by parallax\hyp{}measurements rests
 on the assumption that light is propagated in straight lines, and hence the
 method is exact in this system of coordinates. In so far as the distances of
 celestial objects are determined by parallaxes or parallactic motions, the
@@ -10695,6 +10852,25 @@ coordinate~$r$ will agree with their accepted distances. This result may be
 contrasted with the solution for the field of a particle in \SecRef{38} where the coordinate~$r$
 has no immediate observational significance. Radial distances determined
 by direct operations with measuring-rods correspond to~$R\chi$, not~$r$.
+
+Some readers have found the above argument that astronomical measurements of parallax determine the coordinate~$r$
+(not the proper-distance~$R\chi$) too condensed.
+It may be stated more fully as follows.
+We make a \emph{map} of the curved world in a Euclidean space;
+$r$ and $\phi$ are Euclidean polar coordinates in the map, each star being represented in the map at
+the point so determined.
+In general, distances and angles measured in thfe world will not agree with the distances and angles represented in
+the map; but within the limits of the solar system, where~$\tfrac{1}{3}\lambda r^2$ is negligibly small,
+the map and the world coalesce.
+Since any practical measurements are made within the solar system, all \emph{direct} measurements may be immediately
+transferred to the map.
+The astronomer completes his triangulation by assuming (1) that space is Euclidean and (2) that light travels in
+straight lines.
+These assumptions are true in the map; hence the astronomer's results refer to the map, and his deduced distance
+of the star is the map\hyp{}distance~$r$.
+If he measured the distance with measuring rods he would have to go outside the solar system, and his measures
+of length could not then be immediately transferred to the map;
+this method gives the distance~$R\chi$, disagreeing with the map\hyp{}distance.
 
 The spectroscopic radial velocity is not exactly equivalent to~$dr/dt$, but
 \index{Light-pulse!in curved world}%
@@ -11723,6 +11899,75 @@ a pseudo-vector because it behaves as a vector for Galilean coordinates and
 Lorentz transformations. Thus the equation~\Eq{(74.8)} does not admit of application
 to coordinates other than Galilean.
 
+Equation~\Eq{(74.71)} expresses the potential at time~$t$ in terms of the positions and strengths of the sources
+at a time~$t-r$, different for each source.
+Evidently it will be useful for practical calculation to have a formula giving the potential at time~$t$ in terms
+of the positions and strengths of the sources at the time~$t$.
+This formula is obtained as follows.
+
+Consider a fixed point~$P$ at time~$t$ and a moving source~$P'$ at time~$t-\tau$.
+Let the motion of the source be prescribed so that the distance $PP'$ is given as a function of~$t-\tau$, viz.
+\[
+PP' = r = f(t-\tau).
+\]
+Then the component velocity of~$P'$ along $P'P$ is
+\[
+v_r = -dr/dt = -f'(t-\tau).
+\]
+Suppose that the wave emitted from~$P'$ at time~$t-\tau$ has at time~$t$ reached a point~$Q$ in the direction~$P'P$.
+Let~$PQ=\alpha$, so that
+\[
+\alpha = \tau - r = \tau - f(t-\tau),
+\Tag{(74.91)}
+\]
+the wave-velocity being unity.
+Then~$\alpha$ is a function of~$t$ and \Foreign{vice versa}.
+By differentiating~\Eq{(74.91)}
+\[
+1 = \frac{d\tau}{d\alpha} + f'(t-\tau)\frac{d\tau}{d\alpha} = (1-v_r)\frac{d\tau}{d\alpha}.
+\]
+Hence, if~$\phi(t-\tau)$ is any quantity associated with the source~$P'$ at the time~$t-\tau$
+\[
+\left\{ \frac{\phi}{r(1-v_r)} \right\}_{t-\tau} = \frac{\phi(t-\tau)}{f(t-\tau)}\frac{d\tau}{d\alpha}=\frac{d}{d\alpha}F(t-\tau),
+\Tag{(74.92)}
+\]
+where $F'=-\phi/f$.
+
+The appropriate value of~$\tau$ required in calculating a retarded potential is given by the condition that~$Q$
+coincides with~$P$, i.e.~$\alpha = 0$.
+Hence
+\[
+\left[\frac{\phi}{r(1-v_r)}\right] = \left\{\frac{d}{d\alpha}F(t-\tau)\right\}_{\alpha=0},
+\Tag{(74.93)}
+\]
+the square bracket indicating the antedated value.
+
+By Lagrange's theorem on the expansion of implicit functions, writing~\Eq{(74.91)} in the form
+\[
+(t-\tau) = (t-\alpha)-f(t-\tau),
+\]
+we have
+\begin{multline*}
+F(t-\tau) = F(t-\alpha) - F'(t-\alpha)f(t-\alpha) -
+                \sum_2^\infty\frac{1}{n!}\frac{\dd^{n-1}}{\dd\alpha^{n-1}}(F'(t-\alpha)\{f(t-\alpha)\}^n)\\
+          = F(t-\alpha) + \phi(t-\alpha) +
+              \sum_2^\infty\frac{1}{n!}\frac{\dd^{n-1}}{\dd\alpha^{n-1}}(\phi(t-\alpha)\{f(t-\alpha)\}^n)
+\end{multline*}
+by~\Eq{(74.92)}.
+Substituting in~\Eq{(74.93)}, and noting that~$\dd/\dd\alpha = -\dd/\dd t$, we obtain
+\[
+\left[\frac{\phi}{r(1-v_r)}\right]= -F'(t) - \frac{d}{dt}\phi(t) +
+                                      \sum_2^\infty\frac{(-1)^n}{n!}\frac{d^n}{dt^n}(\phi(t)\{f(t)\}^n).
+\]
+Hence
+\[
+\left[\frac{\phi}{r(1-v_r)}\right]= \frac{\phi}{r} - \frac{d\phi}{dt}\phi(t) +
+                                      \sum_2^\infty\frac{(-1)^n}{n!}\frac{d^n}{dt^n}(r^{n-1}\phi).
+\Tag{(74.94)}
+\]
+where on the right~$r$ and~$\phi$ are to be taken for the time~$t$.
+This expansion has been used in~\SecRef{57}.
+
 \Section[Lorentz transformation of electromagnetic force]{75.}{The Lorentz transformation of electromagnetic force}
 \index{Force!Lorentz transformation of}%
 \index{Lorentz transformation!for electromagnetic force}%
@@ -11917,6 +12162,46 @@ field. In order to prevent the electronic charge from dispersing under its own
 repulsion, non-Maxwellian ``binding forces'' are necessary, and it is the energy,
 stress and momentum of these binding forces which constitute the material
 energy-tensor~$M^{\mu\nu}$.
+
+The equation~\Eq{(76.2)} giving the mechanical force due to an electromagnetic field is essentially a
+\emph{macroscopic} equation; it expresses the results of experiments on matter in bulk.
+We must not assume that it holds for a single electron---in fact it is probably untrue.
+
+This limitation has been obscured by the fact that the law of motion of a single electron, which has been
+discovered empirically, has a false resemblance to~\Eq{(76.2)}.
+But as shall be explained in~\SecRef{80} the force on the electron is~${F'^\mu}_\nu J^\nu$, where~${F'^\mu}_\nu$ is
+the applied external field, not the actual field~${F^\mu}_\nu$ modified by the presence of the accelerated electron.
+In a macroscopically continuous distribution of charge and current the distinction between~$F$ and~$F'$ is of no
+importance\footnotemark;\footnotetext
+            {The material is assumed to be non-polarisable.
+             Polarisation introduces the complications discussed in~\SecRef{82}.}
+but in an electronic distribution~$F-F'$ is of the same order of magnitude as~$F'$ at the only points which matter,
+viz.\ where~$J^\mu\neq 0$. According to~\SecRef{80} the condition~$F_{\mu\nu}F^{\mu\nu}=0$ fulfilled in empty space
+appears to be replaced by the condition that the integral of this expression over the electron vanishes,
+or by some condition nearly akin to this.
+The appearance of an integral equation in the microscopic laws of physics is in accordance with modern expectation.
+
+From~\Eq{(76.2)} the expression~$E^\nu_\mu$ for the electromagnetic energy-tensor is obtained.
+This accordingly refers to the macroscopic electromagnetic field, and has nothing to do with the intense
+forces within and between the atoms.
+We then recognise that the whole energy-tensor (which is conserved identically) must consist of the two
+parts~$M^\nu_\mu$ and~$E^\nu_\mu$ supposed to be due respectively to the continuous matter and the continuous
+electromagnetic field.
+The question whether we could possibly dispense with~$M^\nu_\mu$ does not arise, because the macroscopic
+conception does not admit local electronic fields.
+
+In passing to the microscopic problem we assume that the state of the world at any point is still described by
+the variables~$g_{\mu\nu}$ and~$F_{\mu\nu}$.
+We continue to construct the formal quantities~$T_{\mu\nu}$ and~$E_{\mu\nu}$ according to~\Eq{(54.3)} and~\Eq{(77.2)}.
+The former has an evident importance because it is identically conserved;
+the latter is only of interest because it is continuous with the genuine electromagnetic energy-tensor which still
+exists in regions outside matter.
+Outside matter~$T_{\mu\nu}$ and~$E_{\mu\nu}$ coalesce; inside matter they cannot be equal because~$E$ vanishes
+identically.
+The difference is called the non-Maxwellian energy-tensor~$M_{\mu\nu}$.
+It will be seen that the separation of~$T_{\mu\nu}$ into~$M_{\mu\nu}+E_{\mu\nu}$ is somewhat different according
+as the problem is treated macroscopically or microscopically, since in the former case the energy of the intense
+Maxwellian fields around the electrons is included in~$M_{\mu\nu}$.
 
 \Section{77.}{The electromagnetic energy-tensor}
 \index{Electromagnetic action!energy-tensor}%
@@ -12774,6 +13059,36 @@ of a possible generalisation of Maxwell's theory by admitting that the covariant
 and contravariant electromagnetic tensors may in certain circumstances be
 independent tensors, e.g.\ inside the electron. This is the basis of a theory of
 matter developed by G.~Mie.
+
+For a further discussion of the macroscopic electromagnetic equations
+when the constitutive equations are not isotropic, see
+\Title{T.~de~ Donder, Gomptes Rendus, 9 July 1923}.
+It will be noticed that de Donder introduces quantities~$(\bar{F}_{\mu\nu})$
+which appear to be intermediate between~$F_{\mu\nu}$ and~$H_{\mu\nu}$ as defined in this section.
+This is due to a difficulty which arises in obtaining an action-density and energy-tensor.
+The natural form of action-density~$F_{\mu\nu}\mf{H}^{\mu\nu}$ can be associated with an energy-tensor
+\[
+-F_{\mu\alpha}H^{\nu\alpha} + \tfrac{1}{4}g^\nu_\mu F_{\alpha\beta}H^{\alpha\beta}
+\]
+analogous to~\Eq{(77.2)};
+but the divergence of this is not equal to the expected mechanical force~$F_{\mu\nu}H^{\nu\sigma}_\sigma$
+or~$F_{\mu\nu}J^\mu$.
+On the other hand, using the intermediate variable, the action-density takes the symmetrical
+form~$\bar{F}_{\mu\nu}\bar{\mf{F}}^{\mu\nu}$, and the derivation of a mechanical
+force~$\bar{F}_{\mu\nu}\bar{F}^{\nu\sigma}_\sigma$ proceeds without difficulty.
+
+The macroscopically continuous variables are in any case fictitious, and we have a certain amount of choice in
+selecting the ``fictions'' which shall be regarded as homologous with the variables originally defined for
+empty space.
+In Maxwell's original theory the electric displacement is an essentially distinct quantity from the electric force
+and the effect of the polarisation of the medium is to alter the constants in the equations connecting them.
+The more modern view is that displacement and force are essentially the same quantity, and the polarisation of
+the medium increases the average force and displacement alike.
+De Donder's treatment corresponds to the latter view and it presumably represents a closer approximation to
+the actual microscopic processes.
+The chief interest in preserving the older notation in this section is in connection with Mie's theory which
+resurrects the antiquated notion of independence of displacement and force as a possibly fruitful conception in
+connection with the structure of the electron.
 
 \Chapter{VII}{World Geometry}
 
