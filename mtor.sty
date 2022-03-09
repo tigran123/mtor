@@ -43,6 +43,9 @@
 \newfontfamily\mdheadingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\mdheadingfontname}
 \newfontfamily\headingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\headingfontname}
 
+\newfontfamily\libertinefont[Mapping=tex-text]{Linux Libertine O}
+\newcommand{\tux}{{\libertinefont ^^^^e000}}
+
 % Google Nexus 10 (or any Android 10" colour device)
 \tunemarkup{pgnexus10}{\RequirePackage[dvips,headheight=19pt,headsep=2pt,vmargin={0.3in,0.2in},hmargin={0.1in},twoside=true,papersize={135.0mm,216mm}]{geometry}}
 
@@ -334,7 +337,7 @@
 
 \tunemarkup{pgnexus10}{%
 \DeclareMathSizes{15}{11}{7}{6}
-\newcommand{\mainfontsize}{\fontsize{15}{17}\selectfont}
+\newcommand{\mainfontsize}{\fontsize{15}{16.8}\selectfont}
 \newcommand{\sectionfontsize}{\titlefont\fontsize{15}{15}\selectfont}
 \newcommand{\titlefontsize}{\fontsize{18}{18}\selectfont}
 \renewcommand{\footnotesize}{\fontsize{13}{15}\selectfont}

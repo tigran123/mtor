@@ -43,8 +43,10 @@ PHILOSOPHY IN THE UNIVERSITY OF CAMBRIDGE\\
 \hfill
 \vspace*{\stretch{0.7}}
 \begin{center}
+Please send all comments to: {\makeatletter\upshape\bfseries aivazian.tigran@gmail.com\makeatother}\\[1ex]
+\tux\ Typeset with \XeLaTeX\ of \TeX\ Live 2021 under Linux.\\
 PDF version: \textbf{\today{}}\\
-Source code freely available at: \myurl{https://github.com/tigran123/mtor}
+Source Code: \myurl{https://github.com/tigran123/mtor}
 \end{center}
 
 \TableofContents
@@ -3529,7 +3531,7 @@ is a four-dimensional angle.
 
 From a tensor of even rank we can construct an invariant by bringing
 half the suffixes to the upper and half to the lower position and contracting.
-Thus from~$A{\mu\nu\sigma\tau}$ we form~$A_{\mu\nu}^{\sigma\tau}$ and contract, obtaining $A = A_{\mu\nu}^{\mu\nu}$. This invariant
+Thus from~$A_{\mu\nu\sigma\tau}$ we form~$A_{\mu\nu}^{\sigma\tau}$ and contract, obtaining $A = A_{\mu\nu}^{\mu\nu}$. This invariant
 will be called the \emph{spur}\footnotemark.\footnotetext
   {Originally the German word \Foreign{Spur}.}
 Another invariant is the square of the
@@ -7127,6 +7129,7 @@ The quantity obtained by dividing a tensor by~$\sqrt{-g}$ may be called a \emph{
 We shall indicate tensor-volumes by calligraphic type, so that
 \[
 \mf{T}^{\mu\nu} = T^{\mu\nu}\sqrt{-g} \quad \mc{T}^{\mu\nu} = T^{\mu\nu}/\sqrt{-g}
+\Tag{(49.6)}
 \]
 Evidently~$\mf{T}_{\mu\nu}\mc{T}^{\mu\nu}$ is an invariant, German character cancelling calligraphic.
 
@@ -7137,6 +7140,7 @@ and a covariant tensor-volume.
 We may thus write
 \[
 \epsilon_{\alpha\beta\gamma\delta} = \mc{E}_{\alpha\beta\gamma\delta} = \mf{E}_{\alpha\beta\gamma\delta}
+\Tag{(49.7)}
 \]
 The product~$\mc{E}_{\alpha\beta\gamma\delta}\mf{E}^{\alpha\beta\gamma\delta}$ should evidently be invariant;
 this is satisfied because by~\Eq{(48.31)} it has the constant value $4!$.
@@ -7152,6 +7156,7 @@ or the invariant volume $d\mc{V}$ connected by the relation
 Similarly the surface-element is represented by~$dS^{\alpha\beta}$ or~$d\mc{S}'_{\alpha\beta}$, where
 \[
 d\mc{S}'_{\alpha\beta} = \mc{E}_{\alpha\beta\gamma\delta} dS^{\gamma\delta}
+\Tag{(49.8)}
 \]
 The necessity for inserting the accent should be noticed; the result of this operation does not
 give~$d\mc{S}_{\alpha\beta}$ which according to previous definitions is derived from~$dS^{\alpha\beta}$ by
@@ -7161,6 +7166,7 @@ The representation of surface-elements by an adjoint vector in elementary three-
 If
 \[
 d\mc{S}'_\alpha = \mc{E}_{\alpha\beta\gamma} dS^{\beta\gamma},
+\Tag{(49.9)}
 \]
 the vector-volume~$d\mc{S}'_\alpha$ can be used as a measure of the surface-element.
 The elementary theory (restricted to rectangular coordinates) does not discriminate between vectors and vector-volumes.
@@ -7169,12 +7175,14 @@ From a covariant antisymmetrical tensor~$F_{\alpha\beta}$ we can derive two diff
 tensor\hyp{}densities~$\mf{F}^{\alpha\beta}$ and~$\mf{F}'^{\alpha\beta}$, thus
 \[
 \mf{F}^{\alpha\beta} = g^{\alpha\gamma} g^{\beta\delta} F_{\gamma\delta} \sqrt{-g} \quad \mf{F}'^{\alpha\beta} = \mf{E}^{\alpha\beta\gamma\delta} F_{\gamma\delta};
+\Tag{(49.10)}
 \]
 the latter is obtained merely by rearranging the components of~$F_{\alpha\beta}$.
 
 As an illustration we can prove that
 \[
 |\mf{g}^{\mu\nu}| = |g_{\mu\nu}|
+\Tag{(49.11)}
 \]
 
 For this equation is equivalent to
@@ -15477,6 +15485,347 @@ problem before us slightly different from that adopted by the author.
 
 Let~$\mf{K}$ be an invariant\hyp{}density which is a function only of the~$\Star{G}_{\mu\nu}$, and
 let~$\mf{P}^{\mu\nu} = \dd\mf{K}/\dd\Star{G_{\mu\nu}}$, so that
+\[
+\delta\mf{K} = \mf{P}^{\mu\nu}\delta\Star{G}_{\mu\nu}.
+\Tag{(100.8)}
+\]
+Einstein supposes that there exists an action~$\mf{K}\,d\tau$ which has the stationary property for all variations
+of the affine connection described by the coefficients~$\Gamma^\alpha_{\mu\nu}$.
+Writing\footnotemark\footnotetext
+     {In a non\hyp{}metrical geometry there is no fixed association of~$K$ and~$\mf{K}$, and we have to introduce
+      directly the Hamiltonian derivative of an \emph{invariant\hyp{}density,} which was not provided for in
+      the original definition~\Eq{(60.43)}.
+      Equation~\Eq{(100.9)} gives the definition; to remove ambiguity it should also be explicitly stated as part
+      of the definition that the Hamiltonian derivative with respect to a symmetrical quantity is symmetrical and
+      with respect to an antisymmetrical quantity is antisymmetrical.
+      I find that Prof.~de~Donder had already introduced the name ``Hamiltonian of~$\mf{K}$'' for what I have called
+      the Hamiltonian derivative.}
+\[
+\delta\int\mf{K}\,d\tau = \int\frac{\Ham\mf{K}}{\Ham\Gamma^\alpha_{\mu\nu}}\delta\Gamma^\alpha_{\mu\nu}\,d\tau,
+\Tag{(100.9)}
+\]
+the stationary condition is
+\[
+\frac{\Ham\mf{K}}{\Ham\Gamma^\alpha_{\mu\nu}} = 0.
+\]
+
+Inserting~\Eq{(92.42)} in~\Eq{(100.8)} and rejecting the complete differential after the usual partial integration
+\begin{multline*}
+\delta\mf{K}  = \frac{\dd\mf{P}^{\mu\nu}}{\dd x_\alpha}\delta\Gamma^\alpha_{\mu\nu} -
+               \frac{\dd\mf{P}^{\mu\nu}}{\dd x_\nu}\delta\Gamma^\alpha_{\alpha\mu} +
+    \mf{P}^{\mu\nu}(\Gamma^\alpha_{\beta\mu}\delta\Gamma^\beta_{\alpha\nu} +
+                   \Gamma^\beta_{\alpha\nu}\delta\Gamma^\alpha_{\beta\mu} -
+                   \Gamma^\alpha_{\mu\nu}\delta\Gamma^\beta_{\beta\alpha} -
+                   \Gamma^\beta_{\beta\alpha}\delta\Gamma^\alpha_{\mu\nu})\\
+             = \delta\Gamma^\alpha_{\mu\nu}
+  \left(
+    \frac{\dd\mf{P}^{\mu\nu}}{\dd x_\alpha} - \delta^\nu_\alpha\frac{\dd\mf{P}^{\mu\sigma}}{\dd x_\sigma} +
+    \Gamma^\mu_{\alpha\epsilon}\mf{P}^{\epsilon\nu} +
+    \Gamma^\nu_{\alpha\epsilon}\mf{P}^{\mu\epsilon} -
+    \Gamma^\beta_{\beta\alpha}\mf{P}^{\mu\nu} -
+    \delta^\nu_\alpha\Gamma^\mu_{\sigma\tau}\mf{P}^{\sigma\tau}
+  \right),
+\end{multline*}
+by changing the dummy suffixes.
+This may be written
+\[
+\delta\mf{K} = \delta\Gamma^\alpha_{\mu\nu}\{(\mf{P}^{\mu\nu})_\alpha - \delta^\nu_\alpha(\mf{P}^{\mu\sigma})_\sigma\},
+\Tag{(100.10)}
+\]
+where~$(\mf{P}^{\mu\nu})_\alpha$ is the affine derivative, viz.
+\[
+(\mf{P}^{\mu\nu})_\alpha = \dd\mf{P}^{\mu\nu}/\dd x_\alpha
+       + \Gamma^{\mu}_{\alpha\epsilon}\mf{P}^{\epsilon\nu}
+       + \Gamma^{\nu}_{\alpha\epsilon}\mf{P}^{\mu\epsilon}
+       - \Gamma^{\beta}_{\beta\alpha}\mf{P}^{\mu\nu}.
+\Tag{(100.11)}
+\]
+
+Since~$\Gamma^\alpha_{\mu\nu}\equiv\delta\Gamma^\alpha_{\nu\mu}$, we must not make the coefficients of these vanish
+independently but must set the sum of the two coefficients equal to zero.
+The stationary property is accordingly expressed by
+\[
+(\mf{P}^{\mu\nu}+\mf{P}^{\nu\mu})_\alpha
+    - \delta^\nu_\alpha(\mf{P}^{\mu\tau})_\sigma - \delta^\mu_\alpha(\mf{P}^{\nu\sigma})_\sigma = 0.
+\Tag{(100.12)}
+\]
+
+Einstein identifies~$\mf{P}^{\mu\nu}$ with the sum of the tensor\hyp{}densities of the metrical and electromagnetic
+fields, these constituting respectively its symmetrical and antisymmetrical parts; that is to say,
+\[
+\mf{P}^{\mu\nu} = \mf{g}^{\mu\nu} + \mf{F}^{\mu\nu}.
+\Tag{(100.13a)}
+\]
+It will be seen that this is a departure from the author's identification of~$\Star{G}_{\mu\nu}$
+with~$g_{\mu\nu}+F_{\mu\nu}$, although closely analogous.
+Since~$F_{\mu\nu}$ is now identified through~\Eq{(100.13a)} we must use another symbol for the antisymmetrical
+part of~$\Star{G}_{\mu\nu}$, viz.
+\[
+\Star{G}_{\mu\nu} = R_{\mu\nu} + \Phi_{\mu\nu}.
+\Tag{(100.13b)}
+\]
+
+By~\Eq{(100.11)} we see that for an antisymmetrical tensor
+\[
+(\mf{F}^{\mu\sigma})_\sigma = \dd\mf{F}^{\mu\sigma}/\dd x_\sigma = \mf{J}^\mu.
+\]
+Hence~\Eq{(100.12)} becomes
+\[
+2(\mf{g}^{\mu\nu})_\alpha
+  - \delta^\nu_\alpha(\mf{g}^{\mu\sigma})_\sigma
+  - \delta^\mu_\alpha(\mf{g}^{\nu\sigma})_\sigma
+  - \delta^\nu_\alpha\mf{J}^\mu
+  - \delta^\mu_\alpha\mf{J}^\nu = 0.
+\Tag{(100.14)}
+\]
+Contract by setting~$\nu=\alpha$; we obtain
+\[
+-3(\mf{g}^{\mu\alpha})_\alpha - 3\mf{J}^\mu = 0,
+\]
+so that~\Eq{(100.14)} simplifies to
+\[
+(\mf{g}^{\mu\nu})_\alpha + \tfrac{1}{3}\delta^\nu_\alpha\mf{J}^\mu + \tfrac{1}{3}\delta^\mu_\alpha\mf{J}^\nu = 0.
+\Tag{(100.15)}
+\]
+
+From the comparison of covariant and affine derivatives in~\Eq{(93.91)} and~\Eq{(93.92)}, we have
+\[
+(\mf{g}^{\mu\nu})_\alpha - \mf{g}^{\mu\nu}_\alpha = S^\mu_{\alpha\epsilon}\mf{g}^{\epsilon\nu} +
+                                                    S^\nu_{\alpha\epsilon}\mf{g}^{\mu\epsilon} -
+                                                    S^\epsilon_{\alpha\epsilon}\mf{g}^{\mu\nu},
+\Tag{(100.16)}
+\]
+where
+\[
+S^\alpha_{\mu\nu}=\Gamma^\alpha_{\mu\nu} - \{\mu\nu,\alpha\},
+\Tag{(100.17)}
+\]
+as in~\Eq{(93.6)}.
+Since the covariant derivative of~$\mf{g}^{\mu\nu}$ vanishes we have from~\Eq{(100.15)} and~\Eq{(100.16)},
+by lowering suffixes and removing the density factor,
+\[
+S_{\alpha\nu,\mu} + S_{\alpha\mu,\nu} - g_{\mu\nu} S^\epsilon_{\alpha\epsilon} + \tfrac{1}{3}g_{\alpha\nu}J_\mu +
+  \tfrac{1}{3}g_{\alpha\mu}J_\nu = 0,
+\]
+whence multiplying by~$g^{\mu\nu}$
+\[
+S^\epsilon_{\alpha\epsilon} = \tfrac{1}{3}J_\alpha.
+\]
+Accordingly
+\[
+S_{\alpha\nu,\mu} + S_{\alpha\mu,\nu} - \tfrac{1}{3}g_{\mu\nu}J_\alpha
+ + \tfrac{1}{3}g_{\alpha\nu}J_\mu + \tfrac{1}{3}g_{\alpha\mu}J_\nu = 0.
+\]
+Solving these equations for the~$S$\hyp{}tensor
+\[
+S_{\mu\nu,\alpha} = \tfrac{1}{6}g_{\alpha\nu}J_\mu + \tfrac{1}{6}g_{\alpha\mu}J_\nu - \tfrac{1}{2}g_{\mu\nu}J_\alpha.
+\]
+By~\Eq{(100.17)} we now determine the coefficients of affine connection in terms of familiar physical quantities
+\[
+\Gamma^\alpha_{\mu\nu} = \{\mu\nu,\alpha\}
+             + \tfrac{1}{6}g^\alpha_\nu J_\mu + \tfrac{1}{6}g^\alpha_\mu J_\nu
+             - \tfrac{1}{2}g_{\mu\nu}J^\alpha.
+\Tag{(100.18)}
+\]
+Using this value in~\Eq{(92.42)} or~\Eq{(94.3)} we find after a little reduction
+\[
+\left.
+\begin{gathered}
+R_{\mu\nu} = G_{\mu\nu} + \tfrac{1}{6}J_\mu J_\nu\\
+\Phi_{\mu\nu} = \frac{1}{6}\left(\frac{\dd J_\mu}{\dd x_\nu}-\frac{\dd J_\nu}{\dd x_\mu}\right).
+\end{gathered}
+\right\}
+\Tag{(100.19)}
+\]
+This solves the problem of determining~$\Star{G}_{\mu\nu}$ in terms of ordinary physical variables identified
+by~\Eq{(100.13a)}.
+
+Further progress will depend on assuming a special form of~$\mf{K}$.
+It will be remembered that Weyl's action\hyp{}principle led to two laws of nature expressed by~\Eq{(90.61)}
+and~\Eq{(90.71)}.
+If we think it probable that these are the actual laws of the world we shall seek to identify~$\mf{K}$
+in such a manner that the same laws will result from the present theory.
+The first step is to connect Weyl's laws with the symbols here employed.
+Setting~$\beta=4\pi$ as indicated by~\Eq{(90.71)}, the laws are
+\[
+k_\mu = -\frac{4\pi}{3}J_\mu.
+\Tag{(100.20)}
+\]
+\[
+M_{\mu\nu} = \frac{3}{4\pi}(k_\mu k_\nu - \tfrac{1}{2}g_{\mu\nu}k_\alpha k^\alpha) =
+         \frac{4\pi}{3}(J_\mu J_\nu - \tfrac{1}{2}g_{\mu\nu}J_\alpha J^\alpha).
+\Tag{(100.21)}
+\]
+Hence
+\begin{align*}
+T_{\mu\nu}-M_{\mu\nu} & = -8\pi\{(G_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}(G-2\lambda))+\tfrac{1}{6}(J_\mu J_\nu -\tfrac{1}{2}g_{\mu\nu}J_\alpha J^\alpha)\}\\
+                      & = -8\pi (R_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}(R-2\lambda)) \quad \text{by~\Eq{(100.19)}}.
+\end{align*}
+
+This difference between the whole energy\hyp{}tensor and the electronic energy\hyp{}tensor must represent the
+Maxwellian energy\hyp{}tensor~$E_{\mu\nu}$.
+Hence~$E_{\mu\nu}=-8\pi(R_{\mu\nu}-\tfrac{1}{2}g_{\mu\nu}(R-2\lambda))$.
+Since~$E=0$, we obtain by contraction~$R=4\lambda$.
+Again by~\Eq{(100.19)} and~\Eq{(100.20)}
+\[
+\Phi_{\mu\nu}=-\frac{1}{8\pi}\left(\frac{\dd k_\mu}{\dd x_\nu}-\frac{\dd k_\nu}{\dd x_\mu}\right)
+             =-\frac{1}{8\pi}F_{\mu\nu}.
+\]
+Hence Weyl's laws correspond to the equations
+\[
+\left.
+\begin{gathered}
+E_{\mu\nu} = -8\pi (R_{\mu\nu} - \lambda g_{\mu\nu})\\
+F_{\mu\nu} = -8\pi \Phi_{\mu\nu}.
+\end{gathered}
+\right\}
+\Tag{(100.22)}
+\]
+
+Now
+\begin{align*}% XXX fix this alignment
+\delta(F_{\mu\nu}\mf{F}^{\mu\nu}) & =
+   (g_{\mu\alpha}g_{\nu\beta}/\sqrt{-g})\delta(\mf{F}^{\mu\nu}\mf{F}^{\alpha\beta})
+   + \mf{F}^{\mu\nu}\mf{F}^{\alpha\beta}\delta(g_{\mu\alpha}g_{\nu\beta}/\sqrt{-g})\\
+& = F_{\mu\nu}\delta\mf{F}^{\mu\nu} + F_{\alpha\beta}\delta\mf{F}^{\alpha\beta}
+     +\mf{F}^{\mu\nu}\mf{F}^{\alpha\beta}(-g_{\mu\alpha}g_{\nu\sigma}g_{\beta\tau}\delta g^{\sigma\tau}
+      -g_{\nu\beta}g_{\mu\sigma}g_{\alpha\tau}\delta g^{\sigma\tau}\\
+& + \tfrac{1}{2}g_{\mu\alpha}g_{\nu\beta}g_{\sigma\tau}\delta g^{\sigma\tau})/\sqrt{-g},
+\end{align*}
+by~\Eq{(35.12)} and~\Eq{(35.3)}
+\[
+= 2(F_{\mu\nu}\delta\mf{F}^{\mu\nu} + \mf{E}_{\sigma\tau}\delta g^{\sigma\tau})\quad\text{by~\Eq{(77.2)}}.
+\]
+But $E_{\sigma\tau}\delta\mf{g}^{\sigma\tau}=E_{\sigma\tau}\sqrt{-g}\delta g^{\sigma\tau}+E_{\sigma\tau}g^{\sigma\tau}\delta(\sqrt{-g})=\mf{E}_{\sigma\tau}\delta g^{\sigma\tau}$, since~$E=0$.
+Hence
+\begin{align*}
+-\frac{1}{16\pi}\delta(F_{\mu\nu}\mf{F}^{\mu\nu}) & = -\frac{1}{8\pi}(F_{\mu\nu}\delta\mf{F}^{\mu\nu} +
+    E_{\mu\nu}\delta\mf{g}^{\mu\nu})\\
+   & = (R_{\mu\nu}\delta\mf{g}^{\mu\nu} + \Phi_{\mu\nu}\delta\mf{F}^{\mu\nu})-\lambda g_{\mu\nu}\delta\mf{g}^{\mu\nu}.
+\end{align*}
+Since~$g_{\mu\nu}\delta\mf{g}^{\mu\nu}=2\delta\sqrt{-g}$ this becomes (writing~$\alpha=32\pi\lambda$)
+\[
+-\frac{1}{16\pi}\delta(-\alpha\sqrt{-g}+F_{\mu\nu}\mf{F}^{\mu\nu}) = \Star{G}_{\mu\nu}\delta\mf{P}^{\mu\nu}.
+\Tag{(100.23)}
+\]
+
+Einstein notes that associated with any density~$\mf{K}$ there will be another density~$\mf{K}'$ given by
+\begin{align*}
+\mf{K}' & = \mf{K} - \Star{G}_{\mu\nu} \frac{\dd\mf{K}}{\dd\Star{G}_{\mu\nu}}\\
+        & = \mf{K} - \Star{G}_{\mu\nu} \mf{P}^{\mu\nu}.
+\Tag{(100.24)}
+\end{align*}
+This ``modified'' density is scarcely less fundamental than the original density.
+We have by~\Eq{(100.8)} and~\Eq{(100.24)}
+\[
+\left.
+\begin{gathered}
+  \delta\mf{K}   = \mf{P}^{\mu\nu}   \delta\Star{G}_{\mu\nu}\\
+- \delta\mf{K}'  = \Star{G}_{\mu\nu} \delta\mf{P}_{\mu\nu}
+\end{gathered}
+\right\}
+\Tag{(100.25)}
+\]
+Comparing~\Eq{(100.23)} and~\Eq{(100.25)} it follows that
+\[
+\mf{K}' = \frac{1}{16\pi}(-\alpha\sqrt{-g} + F_{\mu\nu}\mf{F}^{\mu\nu}).
+\]
+This is Einstein's conclusion.
+
+The~$\alpha$\hyp{}term in~$\mf{K}'$, which seenis to be a rather unnatural complication of the expression,
+arises from the cosmical~$\lambda$\hyp{}term in the energy.
+It would be simpler if we could dispense with the cosmical term, reverting to Einstein's original unclosed space.
+Since~$\lambda=\tfrac{1}{4}R$, this would involve~$R=0$.
+
+Hamiltonian derivatives with respect to~$\Gamma^\alpha_{\mu\nu}$ may be expected to represent quantities of
+fundamental significance in regard to the structure of the world;
+derivatives with respect to~$g_{\mu\nu}$ and~$k_\mu$ should rather yield quantities which spring into prominence
+in our perception of the world as the activity of an electromagnetic process~$k_\mu$ working in a passive
+metric~$g_{\mu\nu}$.
+Einstein has used the variation appropriate to his object---the formulation of a controlling law of
+world\hyp{}structure;
+the author used the other variation since his aim was to discover quantities conspicuous in current physics.
+
+It is difficult to regard any invariant\hyp{}density other than the generalised volume~\Eq{(101.13)} as ideally simple.
+We may therefore inquire what would be the result if~$\mf{K}$ is taken to
+be~$\sqrt{-|\Star{G}_{\mu\nu}|}$\footnotemark.\footnotetext
+         {Einstein originally started with the generalised volume and reached equations~\Eq{(100.19)};
+          but in his third paper he proved the same equations independently of the form of~$\mf{K}$.
+          Thus the generalised volume is not actually used in his discussion.}
+
+Since~$\mf{K}$ is then a homogeneous quadratic (but irrational) function of the~$\Star{G}_{\mu\nu}$ we have
+by~\Eq{(100.24)}
+\[
+\mf{K}' = \mf{K} - 2\mf{K} = -\mf{K}.
+\Tag{(100.26)}
+\]
+
+Also writing~$\Delta=|\Star{G}_{\mu\nu}|$
+\[
+\mf{P}^{\mu\nu}=-\frac{1}{2\sqrt{-\Delta}}\times(\text{minor of}\,\Star{G}_{\mu\nu}).
+\]
+By the properties of determinants the determinant of the minors is equal to~$\Delta^3$.
+Hence
+\[
+|\mf{P}^{\mu\nu}| = \frac{\Delta^3}{16\Delta^2} = \frac{1}{16}\Delta.
+\]
+Hence
+\begin{align*}
+\tfrac{1}{4}\mf{K} = \sqrt{-|\mf{P}^{\mu\nu}|} & = \sqrt{-|\mf{g}^{\mu\nu} + \mf{F}^{\mu\nu}|}\\
+                                               & = \sqrt{-|g_{\mu\nu} + F_{\mu\nu}|}.
+\end{align*}
+The last step follows as in~\Eq{(49.11)}.
+Thus notwithstanding the different identifications of the physical tensors by Einstein and the author the generalised
+volume has the same identification in both discussions (except for the numerical factor) and its evaluation
+in~\SecRef{101} is still applicable.
+We shall insert the factor~$\lambda$ in order that current units of length may be used instead of the unknown natural
+unit; then if fourth powers of~$F_{\mu\nu}$ are neglected, we have by~\Eq{(101.31)}
+\begin{align*}
+\tfrac{1}{4}\mf{K} & = (\lambda^2 + \tfrac{1}{4}F_{\mu\nu}F^{\mu\nu})\sqrt{-g},\\
+\text{or}\quad -\mf{K}' & = 4\lambda^2\sqrt{-g} + F_{\mu\nu}\mf{F}^{\mu\nu}.
+\Tag{(100.27)}
+\end{align*}
+This differs from the previous identification of~$\mf{K}'$ only in the coefficient of~$\sqrt{-g}$;
+and we have thus obtained quite naturally a term of the right form to supply the cosmical term of the energy.
+But it is joined with the \emph{wrong sign}\footnotemark.\footnotetext
+       {The difference of magnitude is of no consequence since it is absorbed in the choice of unit of~$F_{\mu\nu}$.}
+
+The following is perhaps a permissible way of remedying this difficulty of sign.
+The generalised volume is based on the determinant
+\begin{multline*}
+\left.
+\begin{gathered}
+(4!)\Delta = \mf{E}^{\alpha\beta\gamma\delta} \mf{E}^{\epsilon\zeta\eta\theta}
+                  \Star{G}_{\alpha\epsilon} \Star{G}_{\beta\zeta} \Star{G}_{\gamma\eta} \Star{G}_{\delta\theta}\\
+\text{Let}\quad (4!)\Delta' = \mf{E}^{\alpha\beta\gamma\delta} \mf{E}^{\epsilon\zeta\eta\theta}
+                  \Star{G}_{\alpha\epsilon} \Star{G}_{\zeta\beta} \Star{G}_{\gamma\eta} \Star{G}_{\theta\delta}.
+\end{gathered}
+\right\}
+\Tag{(100.28)}
+\end{multline*}
+which is also the square of an invariant\hyp{}density, but is not a determinant\footnotemark.\footnotetext
+    {My attention was called to this expression by Prof.~B.~Weitzenb\"ock.}
+
+The alternating expression~$\Delta'$ seems to be a no less natural combination than~$\Delta$.
+To form a term which is quadratic in the~$F_{\mu\nu}$ we must pick out 2 of the 4
+factors~$\Star{G}_{\alpha\epsilon}$, etc., to provide the~$F_{\mu\nu}$.
+Clearly out of the 6 possible selections, 2 will have the same sign in~$\Delta$ and~$\Delta'$ and 4 will have
+opposite signs.
+Thus in the sum the quadratic term is joined with opposite signs in~$\Delta$ and~$\Delta'$, so that by
+substituting~$\Delta'$ for~$\Delta$ we obtain the sign which we require.
+We conclude that---
+
+Provided the natural metrical and electromagnetic units are such that fourth powers of the electromagnetic force
+are beyond the range of observation, the present system of field-laws (other than equations of definition) is
+summed up in the condition that
+\[
+\delta \int \sqrt{-\Delta'}\,d\tau = 0,
+\Tag{(100.29)}
+\]
+for all small variations of the affine connection which vanish at the bouridary of the region.
+
+But, so far as I can see, the natural units do not satisfy the proviso~(\SecRef{102}), and the neglected fourth
+powers may cause further trouble.
 
 \Section{101.}{The generalised volume}
 \index{Generalised volume}%
@@ -15493,14 +15842,14 @@ we can form in-invariants belonging respectively to a one-dimensional, a two-dim
 \index{In-invariants}%
 and a four-dimensional domain.
 
-(1) For a line-element $(dx)^{\mu}$, the simplest in-invariant is
+(1) For a line-element $(dx)^{\mu}$, the simplest in\hyp{}invariant is
 \[
 \Star{G}_{\mu\nu}\, (dx)^{\mu}\, (dx)^{\nu},
 \Tag{(101.11)}
 \]
 which appears physically as the square of the length.
 
-(2) For a surface-element~$dS^{\mu\nu}$, the simplest in-invariant is
+(2) For a surface\hyp{}element~$dS^{\mu\nu}$, the simplest in-invariant is
 \index{Surface-element!in-invariant pertaining to}%
 \[
 \Star{G}_{\mu\nu}\, dS^{\mu\nu},
