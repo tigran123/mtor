@@ -23,8 +23,7 @@
 
 % various page sizes
 \tunemarkuptag{pgnexus10}
-%\tunemarkuptag{pgthinmob}
-%\tunemarkuptag{pgkoboaurahd}
+%\tunemarkuptag{pgauraone}
 
 % various font families
 \tunemarkuptag{garamond}
@@ -48,6 +47,9 @@
 
 % Google Nexus 10 (or any Android 10" colour device)
 \tunemarkup{pgnexus10}{\RequirePackage[dvips,headheight=19pt,headsep=2pt,vmargin={0.3in,0.2in},hmargin={0.1in},twoside=true,papersize={135.0mm,216mm}]{geometry}}
+
+% Kobo Aura One 8"
+\tunemarkup{pgauraone}{\RequirePackage[dvips,headheight=19pt,headsep=4pt,vmargin={0.3in,0.25in},hmargin={0.07in},twoside=true,papersize={118.0mm,158.0mm}]{geometry}}
 
 \RequirePackage[plainpages=false,
                 hyperfootnotes=false,
@@ -336,10 +338,28 @@
 \newcommand{\Same}{\raisebox{0.5ex}{\rule{2em}{1pt}}}
 
 \tunemarkup{pgnexus10}{%
+\definecolor{mygreen}{rgb}{0.0, 0.4, 0.0}
+\definecolor{lettrinecolour}{rgb}{0.8, 0.0, 0.0}
 \DeclareMathSizes{15}{11}{7}{6}
 \newcommand{\mainfontsize}{\fontsize{15}{16.8}\selectfont}
 \newcommand{\sectionfontsize}{\titlefont\fontsize{15}{15}\selectfont}
+\newcommand{\booktitlefontsize}{\LARGE}
+\newcommand{\authortitlefontsize}{\Large}
 \newcommand{\titlefontsize}{\fontsize{18}{18}\selectfont}
+\newcommand{\tablefontsize}{\small}
+\renewcommand{\footnotesize}{\fontsize{13}{15}\selectfont}
+}
+
+\tunemarkup{pgauraone}{%
+\definecolor{mygreen}{rgb}{0.0, 0.0, 0.0}
+\definecolor{lettrinecolour}{rgb}{0.0, 0.0, 0.0}
+\DeclareMathSizes{16}{10}{7}{6}
+\newcommand{\mainfontsize}{\fontsize{16}{18}\selectfont}
+\newcommand{\sectionfontsize}{\titlefont\fontsize{15}{15}\selectfont}
+\newcommand{\booktitlefontsize}{\Large}
+\newcommand{\authortitlefontsize}{\large}
+\newcommand{\titlefontsize}{\fontsize{18}{18}\selectfont}
+\newcommand{\tablefontsize}{\fontsize{9.5}{12}\selectfont}
 \renewcommand{\footnotesize}{\fontsize{13}{15}\selectfont}
 }
 
@@ -347,6 +367,5 @@
 \renewcommand{\contentsname}{\protect\thispagestyle{empty}\protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
 }
 
-\definecolor{mygreen}{rgb}{0.0, 0.4, 0.0}
 \newcommand{\titlesepbig}{{\usefont{U}{webo}{xl}{n}\Large\textcolor{mygreen}{ahb}}}
 \newcommand{\myurl}[1]{\href{#1}{#1}}
