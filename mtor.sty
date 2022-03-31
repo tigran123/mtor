@@ -31,16 +31,14 @@
 \tunemarkup{garamond}{%
 \def\mainfontname{Garamond Premier Pro}
 \def\parttitlefontname{GoudyHandtooled BT}
-\def\titlefontname{Garamond Premier Pro Semibold Display}
+\def\titlefontname{Garamond Premier Pro Medium Display}
 \def\mdheadingfontname{Garamond Premier Pro Medium Caption}
-\def\headingfontname{Garamond Premier Pro Semibold Caption}
 }
 
 \setmainfont[WordSpace={1.2,2.5,1.0},Mapping=tex-text]{\mainfontname}
 \newfontfamily\parttitlefont[Letters=Uppercase,LetterSpace=3.0,WordSpace=2.0,Mapping=tex-text]{\parttitlefontname}
 \newfontfamily\titlefont[Letters=Uppercase,LetterSpace=3.0,WordSpace=2.0,Mapping=tex-text]{\titlefontname}
 \newfontfamily\mdheadingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\mdheadingfontname}
-\newfontfamily\headingfont[Numbers=Lining,LetterSpace=1.2,WordSpace=1.2,Mapping=tex-text]{\headingfontname}
 
 \newfontfamily\libertinefont[Mapping=tex-text]{Linux Libertine O}
 \newcommand{\tux}{{\libertinefont ^^^^e000}}
@@ -138,8 +136,6 @@
   \SetRunningHeads{#2}
   \vspace*{0.5in}
   \ChapHead{\MakeUppercase{#2}}
-  \ifthenelse{\not\equal{#1}{}}{%
-    \subsection*{\centering\normalfont\normalsize\itshape #1}}{}%
   \label{appendix:#2}%
   \addtocontents{toc}{\protect\ToCApp{#2}}
   \mainfontsize
@@ -245,21 +241,12 @@
   \end{array}$}
 }
 
-
 % Loosen spacing
 \setlength{\emergencystretch}{1em}
 \newcommand{\Loosen}{\spaceskip 0.375em plus 0.5em minus 0.25em}
 
 % Scratch pad for length calculations
 \newlength{\TmpLen}
-
-%% ToC formatting %%
-%\AtBeginDocument{\renewcommand{\contentsname}%
-%  {\protect\thispagestyle{empty}%
-%    \protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
-%}
-%\renewcommand{\contentsname}{\protect\thispagestyle{empty}\protect\ChapHead{\titlefont CONTENTS}\protect\vspace{-\baselineskip}}
-
 
 % Appendix entries
 \newcommand{\ToCApp}[1]{%
