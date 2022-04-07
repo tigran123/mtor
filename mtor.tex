@@ -725,18 +725,18 @@ in all cases the formula is included in the following general form---
 
 The interval $ds$ between two neighbouring events with coordinates
 \index{Quadratic formula for interval}%
-$(x_{1}, x_{2}, x_{3}, x_{4})$ and $(x_{1} + dx_{1}, x_{2} + dx_{2}, x_{3} + dx_{3}, x_{4} + dx_{4})$ in any coordinate\hyp{}system
+$(x_1, x_2, x_3, x_4)$ and $(x_1 + dx_1, x_2 + dx_2, x_3 + dx_3, x_4 + dx_4)$ in any coordinate\hyp{}system
 is given by
 \begin{multline*}
-  ds^{2} = g_{11}\, dx_{1}^{2} + g_{22}\, dx_{2}^{2} + g_{33}\, dx_{3}^{2} + g_{44}\, dx_{4}^{2} \\
+  ds^2 = g_{11}\, dx_1^2 + g_{22}\, dx_2^2 + g_{33}\, dx_3^2 + g_{44}\, dx_4^2 \\
   \begin{aligned}[b]
-    &+ 2g_{12}\, dx_{1}\, dx_{2} + 2g_{13}\, dx_{1}\, dx_{3} + 2g_{14}\, dx_{1}\, dx_{4} \\
-    &+ 2g_{23}\, dx_{2}\, dx_{3} + 2g_{24}\, dx_{2}\, dx_{4} + 2g_{34}\, dx_{3}\, dx_{4},
+    &+ 2g_{12}\, dx_1\, dx_2 + 2g_{13}\, dx_1\, dx_3 + 2g_{14}\, dx_1\, dx_4 \\
+    &+ 2g_{23}\, dx_2\, dx_3 + 2g_{24}\, dx_2\, dx_4 + 2g_{34}\, dx_3\, dx_4,
   \end{aligned}
 \Tag{(2.1)}
 \end{multline*}
-where the coefficients $g_{11}$, etc. are functions of $x_{1}$,~$x_{2}$, $x_{3}$,~$x_{4}$. That is to say,
-$ds^{2}$~is some quadratic function of the differences of coordinates.
+where the coefficients $g_{11}$, etc. are functions of $x_1$,~$x_2$, $x_3$,~$x_4$. That is to say,
+$ds^2$~is some quadratic function of the differences of coordinates.
 
 This is, of course, not the most general case conceivable; for example, we
 might have a world in which the interval depended on a general quartic
@@ -747,7 +747,7 @@ a precise reason why a quadratic function of the coordinate\hyp{}differences
 should have this paramount importance.
 
 Whilst the form of the right-hand side of~\Eq{(2.1)} is that required by
-observation, the insertion of~$ds^{2}$ on the left, rather than some other function
+observation, the insertion of~$ds^2$ on the left, rather than some other function
 of~$ds$, is merely a convention. The quantity~$ds$ is a measure of the interval.
 \index{Length!measurement of}%
 \index{Measure of interval}%
@@ -825,14 +825,14 @@ interval.
 It is obvious from common experience that intervals which can be
 measured with a clock cannot be measured with a scale, and \Foreign{vice versa}. We
 have thus two varieties of intervals, which are provided for in the formula~\Eq{(2.1)},
-since $ds^{2}$~may be positive or negative and the measure of the interval
+since $ds^2$~may be positive or negative and the measure of the interval
 will accordingly be expressed by a real or an imaginary number. The
 \index{Imaginary intervals}%
 abbreviated phrase ``imaginary interval'' must not be allowed to mislead;
 there is nothing imaginary in the corresponding relation; it is merely that in
 our arbitrary code an imaginary number is assigned as its measure\hyp{}number.
 We might have adopted a different code, and have taken, for example, the
-antilogarithm of~$ds^{2}$ as the measure of the interval; in that case space\hyp{}intervals
+antilogarithm of~$ds^2$ as the measure of the interval; in that case space\hyp{}intervals
 would have received code\hyp{}numbers from~$1$ to~$\infty$, and time\hyp{}intervals
 numbers from~$0$ to~$1$. When we encounter~$\sqrt{-1}$ in our investigations, we
 must remember that it has been introduced by our choice of measure\hyp{}code,
@@ -853,14 +853,14 @@ In that case the right\hyp{}hand side of~\Eq{(2.1)} can
 be broken up into the sum of four squares, admitting imaginary coefficients
 if necessary. Thus writing
 \begin{align*}
-  y_{1} &= a_{1} x_{1} + a_{2} x_{2} + a_{3} x_{3} + a_{4} x_{4}, \\
-  y_{2} &= b_{1} x_{1} + b_{2} x_{2} + b_{3} x_{3} + b_{4} x_{4},\quad\text{etc.,} \\
+  y_1 &= a_1 x_1 + a_2 x_2 + a_3 x_3 + a_4 x_4, \\
+  y_2 &= b_1 x_1 + b_2 x_2 + b_3 x_3 + b_4 x_4,\quad\text{etc.,} \\
 \intertext{so that}
-  dy_{1} &= a_{1}\, dx_{1} + a_{2}\, dx_{2} + a_{3}\, dx_{3} + a_{4}\, dx_{4},\quad\text{etc.,}
+  dy_1 &= a_1\, dx_1 + a_2\, dx_2 + a_3\, dx_3 + a_4\, dx_4,\quad\text{etc.,}
 \end{align*}
-we can choose the constants $a_{1}$, $b_{1}$,~\dots\ so that \Eq{(2.1)}~becomes
+we can choose the constants $a_1$, $b_1$,~\dots\ so that \Eq{(2.1)}~becomes
 \[
-ds^{2} = dy_{1}^{2} + dy_{2}^{2} + dy_{3}^{2} + dy_{4}^{2}.
+ds^2 = dy_1^2 + dy_2^2 + dy_3^2 + dy_4^2.
 \Tag{(4.1)}
 \]
 For, substituting for the $dy$'s and comparing coefficients with~\Eq{(2.1)}, we have
@@ -869,37 +869,37 @@ ways of making the reduction. Note, however, that the reduction to the sum
 of four squares of complete differentials is not in general possible for a \emph{large}
 region, where the $g$'s have to be treated as functions, not constants.
 
-Consider all the events for which $y_{4}$~has some specified value. These will
-form a three\hyp{}dimensional world. Since $dy_{4}$~is zero for every pair of these
+Consider all the events for which $y_4$~has some specified value. These will
+form a three\hyp{}dimensional world. Since $dy_4$~is zero for every pair of these
 events, their mutual intervals are given by
 \[
-ds^{2} = dy_{1}^{2} + dy_{2}^{2} + dy_{3}^{2}.
+ds^2 = dy_1^2 + dy_2^2 + dy_3^2.
 \Tag{(4.2)}
 \]
 But this is exactly like familiar space in which the interval (which we have
 shown to be the same as the distance for space without time) is given by
 \[
-ds^{2} = dx^{2} + dy^{2} + dz^{2},
+ds^2 = dx^2 + dy^2 + dz^2,
 \Tag{(4.3)}
 \]
 where $x$, $y$, $z$ are rectangular coordinates.
 
-Hence a section of the world by $y_{4} = \text{const.}$ will appear to us as space, and
-$y_{1}$,~$y_{2}$,~$y_{3}$ will appear to us as rectangular coordinates. The coordinate\hyp{}frames
-$y_{1}$,~$y_{2}$,~$y_{3}$, and $x$,~$y$,~$z$, are examples of the systems $S$ and~$S'$ of \SecRef{1}, for which
+Hence a section of the world by $y_4 = \text{const.}$ will appear to us as space, and
+$y_1$,~$y_2$,~$y_3$ will appear to us as rectangular coordinates. The coordinate\hyp{}frames
+$y_1$,~$y_2$,~$y_3$, and $x$,~$y$,~$z$, are examples of the systems $S$ and~$S'$ of \SecRef{1}, for which
 the intervals between corresponding pairs of mesh\hyp{}corners are equal. The
 two systems are therefore exactly alike observationally; and if one appears
 to us to be a rectangular frame in space, so also must the other. One proviso
-must be noted; the coordinates $y_{1}$,~$y_{2}$,~$y_{3}$ for real events must be real, as in
+must be noted; the coordinates $y_1$,~$y_2$,~$y_3$ for real events must be real, as in
 familiar space, otherwise the resemblance would be only formal.
 
 Granting this proviso, we have reduced the general expression to
 \[
-ds^{2} = dx^{2} + dy^{2} + dz^{2} + dy_{4}^{2},
+ds^2 = dx^2 + dy^2 + dz^2 + dy_4^2,
 \Tag{(4.4)}
 \]
 where $x$, $y$, $z$ will be recognised by us as rectangular coordinates in space.
-Clearly $y_{4}$~must involve the time, otherwise our location of events by the four
+Clearly $y_4$~must involve the time, otherwise our location of events by the four
 coordinates would be incomplete; but we must not too hastily identify it
 with the time~$t$.
 
@@ -926,30 +926,30 @@ dx,\ dy,\ dz = 0.
 \]
 Accordingly \Eq{(4.4)} gives for this case
 \[
-ds^{2} = dy_{4}^{2}.
+ds^2 = dy_4^2.
 \]
 We have seen in \SecRef{3} that the cycles of the mechanism in all cases correspond
-to equal intervals~$ds$; hence they correspond to equal values of~$dy_{4}^{2}$. But by
+to equal intervals~$ds$; hence they correspond to equal values of~$dy_4$. But by
 the above definition of time they also correspond to equal lapses of time~$dt$;
-hence we must have $dy_{4}$~proportional to~$dt$, and we express this proportionality
+hence we must have $dy_4$~proportional to~$dt$, and we express this proportionality
 by writing
 \[
-dy_{4} = ic\, dt,
+dy_4 = ic\, dt,
 \Tag{(4.5)}
 \]
 where $i = \sqrt{-1}$, and $c$~is a constant. It is, of course, possible that $c$~may be
 an imaginary number, but provisionally we shall suppose it real. Then \Eq{(4.4)}
 becomes
 \[
-ds^{2} = dx^{2} + dy^{2} + dz^{2} - c^{2}\, dt^{2}.
+ds^2 = dx^2 + dy^2 + dz^2 - c^2 dt^2.
 \Tag{(4.6)}
 \]
 
 A further discussion is necessary before it is permissible to conclude that
-\Eq{(4.6)}~is the most general possible form for~$ds^{2}$ in terms of ordinary space and
+\Eq{(4.6)}~is the most general possible form for~$ds^2$ in terms of ordinary space and
 time coordinates. If we had reduced~\Eq{(2.1)} to the rather more general form
 \[
-ds^{2} = dx^{2} + dy^{2} + dz^{2} - c^{2}\, dt^{2} - 2c\alpha\, dx\, dt - 2c\beta\, dy\, dt - 2c\gamma\, dz\, dt,
+ds^2 = dx^2 + dy^2 + dz^2 - c^2 dt^2 - 2c\alpha\, dx\, dt - 2c\beta\, dy\, dt - 2c\gamma\, dz\, dt,
 \Tag{(4.7)}
 \]
 this would have agreed with~\Eq{(4.6)} in the only two cases yet discussed, viz.\
@@ -964,10 +964,10 @@ between two events at different places? I do not think that we can attach
 any meaning to his hazy conception of what $dt$~signified; but we know one
 or two ways in which he was accustomed to determine it. One method which
 he used was that of transport of chronometers. Let us examine then what
-happens when we move a clock from $(x_{1}, 0, 0)$ at the time~$t_{1}$ to another place
+happens when we move a clock from $(x_1, 0, 0)$ at the time~$t_1$ to another place
 \index{Clocks, transport of}%
 \index{Time!convention in reckoning}%
-$(x_{2}, 0, 0)$ at the time~$t_{2}$.
+$(x_2, 0, 0)$ at the time~$t_2$.
 
 We have seen that the clock, whether at rest or in motion, provided it
 remains a precisely similar mechanism, records equal \emph{intervals}; hence the
@@ -979,13 +979,12 @@ be proportional to the integrated interval
 \]
 If the transport is made in the direct line ($dy = 0$, $dz = 0$), we shall have
 according to~\Eq{(4.7)}
-\begin{align*}
-  -ds^{2} &= c^{2}\, dt^{2} + 2c\alpha\, dx\, dt - dx^{2}\displaybreak[0] \\
-  &= c^{2}\, dt^{2}\left\{1 + \frac{2\alpha}{c}\, \frac{dx}{dt} - \frac{1}{c^{2}} \left(\frac{dx}{dt}\right)^{2}\right\}.
-\end{align*}
+\[
+-ds^2 = c^2\, dt^2 + 2c\alpha\, dx\, dt - dx^2 = c^{2}\, dt^{2}\left\{1 + \frac{2\alpha}{c}\, \frac{dx}{dt} - \frac{1}{c^{2}} \left(\frac{dx}{dt}\right)^{2}\right\}.
+\]
 Hence the difference of the clock\hyp{}readings \Eq{(4.81)} is proportional to
 \[
-\int_{t_{1}}^{t_{2}} dt \left(1 + \frac{2\alpha u}{c} - \frac{u^{2}}{c^{2}}\right)^{\frac{1}{2}},
+\int\limits_{t_1}^{t_2} dt \sqrt{1 + \frac{2\alpha u}{c} - \frac{u^{2}}{c^{2}}},
 \Tag{(4.82)}
 \]
 where $u = dx/dt$, i.e. the velocity of the clock. The integral will not in general
@@ -994,11 +993,10 @@ correctly by the reading of the clock. Even when $\alpha = 0$, the moving clock
 does not record correct time.
 
 Now introduce the condition that the velocity~$u$ is very small, remembering
-that $t_{2} - t_{1}$ will then become very large. Neglecting $u^{2}/c^{2}$, \Eq{(4.82)}~becomes
-\begin{gather*}
-  \int_{t_{1}}^{t_{2}} dt \left(1 + \frac{\alpha}{c}\, \frac{dx}{dt}\right)\rlap{\qquad\text{approximately}} \\
-  = (t_{2} - t_{1}) + \frac{\alpha}{c} (x_{2} - x_{1}).
-\end{gather*}
+that $t_{2} - t_{1}$ will then become very large. Neglecting $u^{2}/c^{2}$, \Eq{(4.82)}~becomes approximately
+\[
+\int\limits_{t_1}^{t_2} dt \left(1 + \frac{\alpha}{c}\, \frac{dx}{dt}\right) = (t_2 - t_1) + \frac{\alpha}{c} (x_2 - x_1).
+\]
 The clock, if moved sufficiently slowly, will record the correct time\hyp{}difference
 if, and only if, $\alpha = 0$. Moving it in other directions, we must have, similarly,
 $\beta = 0$, $\gamma = 0$. Thus \Eq{(4.6)}~is the most general formula for the interval, when
@@ -1023,11 +1021,10 @@ astronomy.
 
 Setting $\alpha = 0$ in~\Eq{(4.82)}, we see that the accurate formula for the clock\hyp{}reading
 will be
-\begin{gather*}
-  \int_{t_{1}}^{t_{2}} dt (1 - u^{2}/c^{2})^{\frac{1}{2}} \\
-  = (1 - u^{2}/c^{2})^{\frac{1}{2}}\, (t_{2} - t_{1})
-  \Tag{(4.9)}
-\end{gather*}
+\[
+\int\limits_{t_1}^{t_2} dt \sqrt{1-\frac{u^2}{c^2}} = \sqrt{1-\frac{u^2}{c^2}} (t_2 - t_1)
+\Tag{(4.9)}
+\]
 for a uniform velocity~$u$. Thus a clock travelling with finite velocity gives
 too small a reading---the clock goes slow compared with the time\hyp{}reckoning
 conventionally adopted.
@@ -1035,14 +1032,14 @@ conventionally adopted.
 To sum up the results of this section, if we choose coordinates such that
 the general quadratic form reduces to
 \[
-ds^{2} = dy_{1}^{2} + dy_{2}^{2} + dy_{3}^{2} + dy_{4}^{2},
+ds^2 = dy_1^2 + dy_2^2 + dy_3^2 + dy_4^2,
 \Tag{(4.95)}
 \]
-then $y_{1}$, $y_{2}$, $y_{3}$ and $y_{4} \sqrt{-1}$ will represent ordinary rectangular coordinates and
+then $y_1$, $y_2$, $y_3$ and $y_4 \sqrt{-1}$ will represent ordinary rectangular coordinates and
 time. If we choose coordinates for which
 \[
-  ds^{2} = dy_{1}^{2} + dy_{2}^{2} + dy_{3}^{2} + dy_{4}^{2}
-  + 2\alpha\, dy_{1}\, dy_{4} + 2\beta\, dy_{2}\, dy_{4} + 2\gamma\, dy_{3}\, dy_{4},
+  ds^2 = dy_1^2 + dy_2^2 + dy_3^2 + dy_4^2
+  + 2\alpha\, dy_1\, dy_4 + 2\beta\, dy_2\, dy_4 + 2\gamma\, dy_3\, dy_4,
 \Tag{(4.96)}
 \]
 these coordinates also will agree with rectangular coordinates and time so far
@@ -1082,7 +1079,7 @@ Make the following transformation of coordinates
   z = z',\
   t = \beta (t' - ux'/c^{2}),
   \Tag{(5.1)} \\
-  \beta = (1 - u^{2}/c^{2})^{-\frac{1}{2}},
+  \beta = \sqrt{1-\frac{u^2}{c^2}},
 \end{gather*}
 where $u$~is any real constant not greater than~$c$.
 
@@ -1095,8 +1092,7 @@ We have by~\Eq{(5.1)}
 \end{align*}
 Hence from \Eq{(4.6)}
 \[
-ds^{2} = dx^{2} + dy^{2} + dz^{2} - c^{2}\, dt^{2}
-= dx'^{2} + dy'^{2} + dz'^{2} - c^{2}\, dt'^{2}.
+ds^2 = dx^2 + dy^2 + dz^2 - c^2 dt^2 = dx'^2 + dy'^2 + dz'^2 - c^2 dt'^2.
 \Tag{(5.2)}
 \]
 
@@ -1134,13 +1130,12 @@ t' = \beta(t + ux/c^{2}),
 showing that an interchange of $S$ and~$S'$ merely reverses the sign of~$u$.
 
 The essential property of the foregoing transformation is that it leaves
-the formula for~$ds^{2}$ unaltered~\Eq{(5.2)}, so that the coordinate\hyp{}systems which it
+the formula for~$ds^2$ unaltered~\Eq{(5.2)}, so that the coordinate\hyp{}systems which it
 connects are alike in their properties. Looking at the matter more generally,
 we have already noted that the reduction to the sum of four squares can be
 made in many ways, so that we can have
 \[
-ds^{2} = dy_{1}^{2} + dy_{2}^{2} + dy_{3}^{2} + dy_{4}^{2}
-= dy_{1}'^{2} + dy_{2}'^{2} + dy_{3}'^{2} + dy_{4}'^{2}.
+ds^2 = dy_1^2 + dy_2^2 + dy_3^2 + dy_4^2 = dy_1'^2 + dy_2'^2 + dy_3'^2 + dy_4'^2.
 \Tag{(5.4)}
 \]
 The determination of the necessary connection between any two sets of
@@ -1148,16 +1143,16 @@ coordinates satisfying this equation is a problem of pure mathematics; we
 can use freely the conceptions of four\hyp{}dimensional geometry and imaginary
 rotations to find this connection, whether the conceptions have any physical
 significance or not. We see from~\Eq{(5.4)} that $ds$~is the distance between two
-points in four\hyp{}dimensional Euclidean space, the coordinates $(y_{1}, y_{2}, y_{3}, y_{4})$ and
-$(y_{1}', y_{2}', y_{3}', y_{4}')$ being rectangular systems (real or imaginary) in that space.
+points in four\hyp{}dimensional Euclidean space, the coordinates $(y_1, y_2, y_3, y_4)$ and
+$(y_1', y_2', y_3', y_4')$ being rectangular systems (real or imaginary) in that space.
 Accordingly these coordinates are related by the general transformations from
 one set of rectangular axes to another in four dimensions, viz.\ translations
 and rotations. Translation, or change of origin, need not detain us; nor need
-a rotation of the space-axes $(y_{1}, y_{2}, y_{3})$ leaving time unaffected. The interesting
-case is a rotation in which $y_{4}$~is involved, typified by
+a rotation of the space-axes $(y_1, y_2, y_3)$ leaving time unaffected. The interesting
+case is a rotation in which $y_4$~is involved, typified by
 \[
-y_{1} = y_{1}' \cos\theta - y_{4}' \sin\theta,\quad
-y_{4} = y_{1}' \sin\theta + y_{4}' \cos\theta.
+y_1 = y_1' \cos\theta - y_4' \sin\theta,\quad
+y_4 = y_1' \sin\theta + y_4' \cos\theta.
 \]
 Writing $u = ic \tan\theta$, so that $\beta = \cos\theta$, this leads to the Lorentz transformation~\Eq{(5.1)}.
 
@@ -1373,16 +1368,16 @@ theory and observation is such that $c'$~cannot differ from~$c$ by more than 1 p
 \index{Spacelike intervals}%
 \index{Timelike intervals}%
 
-We make a slight change of notation, the quantity hitherto denoted by~$ds^{2}$
-being in all subsequent formulae replaced by $-ds^{2}$, so that \Eq{(4.6)}~becomes
+We make a slight change of notation, the quantity hitherto denoted by~$ds^2$
+being in all subsequent formulae replaced by $-ds^2$, so that \Eq{(4.6)}~becomes
 \[
-ds^{2} = c^{2}\, dt^{2} - dx^{2} - dy^{2} - dz^{2}.
+ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2.
 \Tag{(7.1)}
 \]
 There is no particular advantage in this change of sign; it is made in order
 to conform to the customary notation.
 
-The formula may give either positive or negative values of~$ds^{2}$, so that the
+The formula may give either positive or negative values of~$ds^2$, so that the
 interval between real events may be a real or an imaginary number. We call
 real intervals timelike, and imaginary intervals spacelike.
 
@@ -1612,15 +1607,15 @@ time, we might have $4$~minus signs? I think not; because if the region exists
 it must be separated from our $3 + 1$ dimensional region by some boundary.
 On one side of the boundary we have
 \[
-ds^{2} = -dx^{2} - dy^{2} - dz^{2} + c_{1}^{2}\, dt^{2},
+ds^2 = -dx^2 - dy^2 - dz^2 + c_1^2 dt^2,
 \]
 and on the other side
 \[
-ds^{2} = -dx^{2} - dy^{2} - dz^{2} - c_{2}^{2}\, dt^{2}.
+ds^2 = -dx^2 - dy^2 - dz^2 - c_2^2 dt^2.
 \]
 The transition can only occur through a boundary where
 \[
-ds^{2} = -dx^{2} - dy^{2} - dz^{2} + 0\, dt^{2},
+ds^2 = -dx^2 - dy^2 - dz^2 + 0\, dt^2,
 \]
 so that the fundamental velocity is zero. Nothing can move at the boundary,
 and no influence can pass from one side to another. The supposed region
@@ -1637,7 +1632,7 @@ a barrier which does not recede as it is approached.
 The passage to a $2 + 2$ dimensional world would occur through a transition
 region where
 \[
-ds^{2} = -dx^{2} - dy^{2} + 0\, dz^{2} + c^{2}\, dt^{2}.
+ds^2 = -dx^2 - dy^2 + 0\, dz^2 + c^2 dt^2.
 \]
 Space here reduces to two dimensions, but there does not appear to be any
 \index{Dimensions, world of $3 + 1$}%
@@ -1860,7 +1855,7 @@ a time\hyp{}reckoning such that this stationary point corresponds to his own
 motion, the observer is imposing a symmetry on space and time with respect
 to himself, which may be compared with the symmetry imposed in assuming
 a constant velocity of light in all directions. Analytically we imposed the
-same general symmetry by adopting \Eq{(4.6)} instead of~\Eq{(4.7)} as the form for~$ds^{2}$,
+same general symmetry by adopting \Eq{(4.6)} instead of~\Eq{(4.7)} as the form for~$ds^2$,
 making our space-time reckoning symmetrical with respect to the interval
 and therefore with respect to all observational criteria.
 
@@ -2223,7 +2218,7 @@ dx_{1} = \frac{\dd x_{1}}{\dd x_{1}'}\, dx_{1}'
   + \frac{\dd x_{1}}{\dd x_{4}'}\, dx_{4}'; \text{ etc.,}
   \Tag{(15.2)}
 \]
-Substituting from \Eq{(15.2)} in~\Eq{(2.1)} we see that $ds^{2}$~will be a homogeneous
+Substituting from \Eq{(15.2)} in~\Eq{(2.1)} we see that $ds^2$~will be a homogeneous
 quadratic function of the differentials of the new coordinates; and the new
 coefficients $g_{11}'$, $g_{22}'$, etc.\ could be written down in terms of the old, if desired.
 
@@ -2243,22 +2238,22 @@ constant angular velocity~$\omega$, viz.
 \]
 Hence
 \begin{align*}
-  dx &= dx_{1}' \cos \omega x_{4}' - dx_{2}' \sin \omega x_{4}'
-  + \omega(-x_{1}' \sin \omega x_{4}' - x_{2}' \cos \omega x_{4}')\, dx_{4}', \\
-  dy &= dx_{1}' \sin \omega x_{4}' + dx_{2}' \cos \omega x_{4}'
-  + \omega( x_{1}' \cos \omega x_{4}' - x_{2}' \sin \omega x_{4}')\, dx_{4}', \\
-  dz &= dx_{3}', \\
-  dt &= dx_{4}'.
+  dx &= dx_1' \cos \omega x_4' - dx_2' \sin \omega x_4'
+  + \omega(-x_1' \sin \omega x_4' - x_2' \cos \omega x_4')\, dx_4', \\
+  dy &= dx_1' \sin \omega x_4' + dx_2' \cos \omega x_4'
+  + \omega( x_1' \cos \omega x_4' - x_2' \sin \omega x_4')\, dx_4', \\
+  dz &= dx_3', \\
+  dt &= dx_4'.
 \end{align*}
 Taking units of space and time so that $c = 1$, we have for our original fixed
 coordinates by~\Eq{(7.1)}
 \[
-ds^{2} = -dx^{2} - dy^{2} - dz^{2} + dt^{2}.
+ds^2 = -dx^2 - dy^2 - dz^2 + dt^2.
 \]
 Hence, substituting the values found above,
 \begin{multline*}
-  ds^{2} = - dx_{1}'^{2} - dx_{2}'^{2} - dx_{3}'^{2} + \bigl\{1 - \omega^{2} (x_{1}'^{2} + x_{2}'^{2})\bigr\}\, dx_{4}'^{2} \\
-  + 2\omega x_{2}'\, dx_{1}'\, dx_{4}' - 2\omega x_{1}'\, dx_{2}'\, dx_{4}'.
+  ds^2 = - dx_1'^2 - dx_2'^2 - dx_3'^2 + \bigl\{1 - \omega^2 (x_1'^2 + x_2'^2)\bigr\}\, dx_4'^2 \\
+  + 2\omega x_2'\, dx_1'\, dx_4' - 2\omega x_1'\, dx_2'\, dx_4'.
   \Tag{(15.4)}
 \end{multline*}
 
@@ -2269,15 +2264,15 @@ the rotating system from a fixed system of coordinates.
 In the transformation~\Eq{(15.3)} we have paid no attention to any contraction
 of the standards of length or retardation of clocks due to motion with the
 rotating axes. The formulae of transformation are those of elementary
-kinematics, so that $x_{1}'$, $x_{2}'$, $x_{3}'$, $x_{4}'$ are quite strictly the coordinates used in
+kinematics, so that $x_1'$, $x_2'$, $x_3'$, $x_4'$ are quite strictly the coordinates used in
 the ordinary theory of rotating axes. But it may be suggested that elementary
 kinematics is now seen to be rather crude, and that it would be worth while
 to touch up the formulae~\Eq{(15.3)} so as to take account of these small changes
 of the standards. A little consideration shows that the suggestion is impracticable.
-It was shown in \SecRef{4} that if $x_{1}'$, $x_{2}'$, $x_{3}'$, $x_{4}'$ represent rectangular
+It was shown in \SecRef{4} that if $x_1'$, $x_2'$, $x_3'$, $x_4'$ represent rectangular
 coordinates and time as partitioned by direct readings of scales and clocks, then
 \[
-ds^{2} = -dx_{1}'^{2} - dx_{2}'^{2} - dx_{3}'^{2} + c^{2}\, dx_{4}'^{2},
+ds^2 = -dx_1'^2 - dx_2'^2 - dx_3'^2 + c^2 dx_4'^2,
 \Tag{(15.45)}
 \]
 so that coordinates which give any other formula for the interval cannot
@@ -2323,10 +2318,10 @@ substituting from~\Eq{(15.2)} we could obtain the differential equations for any
 desired coordinates. But there is another way of proceeding. The differential
 equations of the track may be written
 \[
-\frac{d^{2} x}{ds^{2}},\quad
-\frac{d^{2} y}{ds^{2}},\quad
-\frac{d^{2} z}{ds^{2}},\quad
-\frac{d^{2} t}{ds^{2}} = 0,
+\frac{d^2 x}{ds^2},\quad
+\frac{d^2 y}{ds^2},\quad
+\frac{d^2 z}{ds^2},\quad
+\frac{d^2 t}{ds^2} = 0,
 \Tag{(15.6)}
 \]
 which on integration, having regard to the condition~\Eq{(7.1)}, give equations~\Eq{(15.5)}.
@@ -2372,14 +2367,14 @@ appeal to empirical laws is a blemish which we must seek to remove later.
 \index{Fields of force}%
 
 Suppose that an observer has chosen a definite system of space\hyp{}coordinates
-and of time\hyp{}reckoning $(x_{1}, x_{2}, x_{3}, x_{4})$ and that the geometry of these is given by
+and of time\hyp{}reckoning $(x_1, x_2, x_3, x_4)$ and that the geometry of these is given by
 \[
-ds^{2} = g_{11}\, dx_{1}^{2} + g_{22}\, dx_{2}^{2} + \dots + 2g_{12}\, dx_{1}\, dx_{2}^{2} + \cdots.
+ds^2 = g_{11}\, dx_1^2 + g_{22}\, dx_2^2 + \ldots + 2g_{12}\, dx_1\, dx_2 + \ldots.
 \Tag{(16.1)}
 \]
 Let him be under the mistaken impression that the geometry is
 \[
-ds_{0}^{2} = -dx_{1}^{2} - dx_{2}^{2} - dx_{3}^{2} + dx_{4}^{2},
+ds_0^2 = -dx_1^2 - dx_2^2 - dx_3^2 + dx_4^2,
 \Tag{(16.2)}
 \]
 that being the geometry with which he is most familiar in pure mathematics.
@@ -2398,9 +2393,9 @@ most sensitive to small changes of geometry, and it would be by this test that
 the observer would first discover discrepancies. The path laid down for it by
 our observer is
 \[
-\int ds_{0} \text{ is stationary,}
+\int ds_0 \text{ is stationary,}
 \]
-i.e.\ a straight line in the coordinates $(x_{1}, x_{2}, x_{3}, x_{4})$. The particle, of course,
+i.e.\ a straight line in the coordinates $(x_1, x_2, x_3, x_4)$. The particle, of course,
 pays no heed to this, and moves in the different track
 \[
 \int ds \text{ is stationary.}
@@ -2418,7 +2413,7 @@ e.g.\ when he introduces the centrifugal force. There would be little
 advantage and many disadvantages in banishing the phrase ``field of force''
 from our vocabulary. We shall therefore regularise the procedure which our
 observer has adopted. We call~\Eq{(16.2)} the \emph{abstract geometry} of the system of
-coordinates $(x_{1}, x_{2}, x_{3}, x_{4})$; it may be chosen arbitrarily by the observer. The
+coordinates $(x_1, x_2, x_3, x_4)$; it may be chosen arbitrarily by the observer. The
 \index{Natural coordinates!geometry}%
 \emph{natural geometry} is~\Eq{(16.1)}.
 
@@ -2432,7 +2427,7 @@ they were non\hyp{}rotating, there is no centrifugal force.
 
 Coordinates for which the natural geometry is
 \[
-ds^{2} = - dx_{1}^{2} - dx_{2}^{2} - dx_{3}^{2} + dx_{4}^{2}
+ds^2 = - dx_1^2 - dx_2^2 - dx_3^2 + dx_4^2
 \]
 are called Galilean coordinates. They are the same as those we have hitherto
 \index{Coordinate\hyp{}systems!Galilean}%
@@ -2472,7 +2467,7 @@ In the latter case ``time'' is an arbitrary name, useful because it fixes a
 consequential nomenclature of velocity, acceleration, etc.
 
 To take a special example, an observer at a station on the earth has found
-a particular set of coordinates $x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$ best suited to his needs. He calls
+a particular set of coordinates $x_1$, $x_2$, $x_3$, $x_4$ best suited to his needs. He calls
 them $x$, $y$, $z$, $t$ in the belief that they are actually rectangular coordinates and
 time, and his terminology---straight line, circle, density, uniform velocity, etc.---follows
 from this identification. But, as shown in \SecRef{4}, this nomenclature can
@@ -2480,7 +2475,7 @@ only agree with the measures made by clocks and scales provided \Eq{(16.2)}~is
 satisfied; and if \Eq{(16.2)}~is satisfied, the tracks of undisturbed particles must be
 straight lines. Experiment immediately shows that this is not the case; the
 tracks of undisturbed particles are parabolas. But instead of accepting the
-verdict of experiment and admitting that $x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$ are not what he supposed
+verdict of experiment and admitting that $x_1$, $x_2$, $x_3$, $x_4$ are not what he supposed
 they were, our observer introduces a field of force to explain why his
 test is not fulfilled. A certain part of this field of force might have been
 avoided if he had taken originally a different set of coordinates (not rotating
