@@ -4136,7 +4136,7 @@ Add \Eq{(31.12)} and \Eq{(31.13)} and subtract~\Eq{(31.11)}, we obtain by~\Eq{(2
 Multiply through by $g'^{\lambda\rho}\, \dfrac{\dd x_{\epsilon}}{\dd x_{\rho}'}$, we have by~\Eq{(27.3)}
 %[** TN: Added break in first line]
 \begin{align*}
-  \{\mu\nu, \rho\}\, \frac{\dd x_{\epsilon}}{\dd x_{\rho}'}
+  \{\mu\nu, \rho\}'\, \frac{\dd x_{\epsilon}}{\dd x_{\rho}'}
   &= g_{\alpha\beta}\, \frac{\dd^{2} x_{\alpha}}{\dd x_{\mu}'\, \dd x_{\nu}'}
   \cdot g'^{\lambda\rho}\, \frac{\dd x_{\beta}}{\dd x_{\lambda}'}\, \frac{\dd x_{\epsilon}}{\dd x_{\rho}'} \\
   &\qquad\qquad+ g'^{\lambda\rho}\, \frac{\dd x_{\gamma}}{\dd x_{\lambda}'}\, \frac{\dd x_{\epsilon}}{\dd x_{\rho}'}
@@ -4164,7 +4164,7 @@ Hence differentiating
     \frac{\dd x_{\delta}}{\dd x_{\nu}'}\,
     \frac{\dd A_{\epsilon}}{\dd x_{\delta}} \\
   &= \left(\{\mu\nu, \rho\}'\, \frac{\dd x_{\epsilon}}{\dd x_{\rho}'}
-    - \frac{\dd x_{\alpha}}{\dd x_{\mu}'}\, \frac{\dd x_{\beta}}{\dd x_{\nu}'}\, [\alpha\beta, \epsilon]\right) A_{\epsilon}
+    - \frac{\dd x_{\alpha}}{\dd x_{\mu}'}\, \frac{\dd x_{\beta}}{\dd x_{\nu}'}\, \{\alpha\beta, \epsilon\}\right) A_{\epsilon}
     + \frac{\dd x_{\alpha}}{\dd x_{\mu}'}\, \frac{\dd x_{\beta}}{\dd x_{\nu}'}\, \frac{\dd A_{\alpha}}{\dd x_{\beta}}
 \Tag{(31.5)}
 \end{align*}
@@ -4272,10 +4272,10 @@ twice, e.g.\ as $dS^{12}$ and $-dS^{21}$. The theorem can be proved as follows--
 
 Since both sides of the equation are invariants it is sufficient to prove the
 equation for any one system of coordinates. Choose coordinates so that the
-surface is on one of the fundamental partitions $x_{2} = \text{const.}$, $x_{4} = \text{const.}$, and so
-that the contour consists of four parts given successively by $x_{1} = \alpha$, $x_{2} = \beta$,
-$x_{1} = \gamma$, $x_{2} = \delta$; the rest of the mesh\hyp{}system may be filled up arbitrarily. For
-an elementary mesh the containing vectors are $(dx_{1}, 0, 0, 0)$ and $(0, dx_{2} , 0, 0)$,
+surface is on one of the fundamental partitions $x_3 = \text{const.}$, $x_4 = \text{const.}$, and so
+that the contour consists of four parts given successively by $x_1 = \alpha$, $x_2 = \beta$,
+$x_1 = \gamma$, $x_2 = \delta$; the rest of the mesh\hyp{}system may be filled up arbitrarily. For
+an elementary mesh the containing vectors are $(dx_1, 0, 0, 0)$ and $(0, dx_2 , 0, 0)$,
 so that by~\Eq{(32.1)}
 \[
 dS^{12} = dx_{1}\, dx_{2} = -dS^{21}.
@@ -4308,9 +4308,9 @@ field of force varies from point to point. If polar coordinates are being used,
 a change of the $r$-component does not necessarily indicate a want of uniformity
 in the field of force; it is at least partly attributable to the inclination between
 the $r$-directions at different points. Similarly when rotating axes are used,
-the rate of change of momentum~$h$ is given not by $dh_{1}/dt$, etc., but by
+the rate of change of momentum~$h$ is given not by $dh_1/dt$, etc., but by
 \[
-dh_{1}/dt - \omega_{3}/h_{2} + \omega_{2}/h_{3}, \text{ etc.}
+dh_1/dt - \omega_3 h_2 + \omega_2 h_3, \text{ etc.}
 \Tag{(33.1)}
 \]
 The momentum may be constant even when the time\hyp{}derivatives of its components
@@ -4416,7 +4416,7 @@ condition for parallel displacement is that the covariant derivative vanishes.
 
 We have hitherto considered the absolute change necessary in order that
 the vector may return to its original value, and so be a single\hyp{}valued function
-of position. If we do not permit any change en route, i.e.\ if we move the vector
+of position. If we do not permit any change \Foreign{en route,} i.e.\ if we move the vector
 by parallel displacement, the same quantity will appear (with reversed sign)
 as a discrepancy~$\delta A_{\mu}$ between the final and initial vectors. Since these are at
 the same point the difference of the initial and final vectors can be measured
