@@ -27,13 +27,21 @@
 %\tunemarkuptag{pgauraone}
 
 % various font families
-\tunemarkuptag{garamond}
+%\tunemarkuptag{garamond}
+\tunemarkuptag{caslon}
 
 \tunemarkup{garamond}{%
 \def\mainfontname{Garamond Premier Pro}
 \def\parttitlefontname{GoudyHandtooled BT}
 \def\titlefontname{Garamond Premier Pro Medium Display}
 \def\mdheadingfontname{Garamond Premier Pro Medium Caption}
+}
+
+\tunemarkup{caslon}{%
+\def\mainfontname{Adobe Caslon Pro}
+\def\parttitlefontname{GoudyHandtooled BT}
+\def\titlefontname{Adobe Caslon Pro}
+\def\mdheadingfontname{Adobe Caslon Pro}
 }
 
 \setmainfont[WordSpace={1.2,2.5,1.0},Mapping=tex-text]{\mainfontname}
@@ -329,7 +337,7 @@
 \definecolor{mygreen}{rgb}{0.0, 0.4, 0.0}
 \definecolor{lettrinecolour}{rgb}{0.8, 0.0, 0.0}
 \DeclareMathSizes{15}{11}{7}{6}
-\newcommand{\mainfontsize}{\fontsize{15}{16.8}\selectfont}
+\newcommand{\mainfontsize}{\fontsize{15}{17}\selectfont}
 \newcommand{\sectionfontsize}{\titlefont\fontsize{15}{15}\selectfont}
 \newcommand{\booktitlefontsize}{\LARGE}
 \newcommand{\authortitlefontsize}{\Large}
